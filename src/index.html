@@ -7,10 +7,113 @@
     <title>Kaizer Chiefs Web Redesign</title>
     <link rel="stylesheet" href="scss/main.scss">
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- ******************* The Navbar Area ******************* -->
+    <header id="wrapper-navbar" class="header header--sticky js-header">
+        <!-- Secondary navbar -->
+        <aside class="secondary-nav text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="secondary-nav__container">
+                            <ul class="secondary-nav__links fw-bold text-uppercase">
+                                <li class="secondary-nav__link">
+                                    <a href="https://www.kcdigistore.com/" target="_blank">Shop <i class="fas fa-external-link-alt"></i></a>
+                                </li>
+                            </ul>
+                            
+                            <ul class="secondary-nav__social-icons">
+                                <li class="secondary-nav__social-icon">
+                                    <a href="https://www.instagram.com/kcfcofficial/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                </li>
+                                <li class="secondary-nav__social-icon">
+                                    <a href="https://www.facebook.com/kaizerchiefs/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li class="secondary-nav__social-icon">
+                                    <a href="https://twitter.com/kaizerchiefs"	target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li class="secondary-nav__social-icon">
+                                    <a href="https://www.youtube.com/c/KaizerChiefsFootballClub" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- end of Secondary navbar -->
+
+        <!-- main navbar -->
+        <nav id="main-nav" class="js-main-nav navbar navbar-expand-xl navbar-dark">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <img src="assets/logo.png" alt="Kaizer Chiefs Logo" width="67" height="67">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul id="main-menu" class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">News</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Matches
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Fixtures</a></li>
+                      <li><a class="dropdown-item" href="#">Results</a></li>
+                      <li><a class="dropdown-item" href="#">League Tables</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Teams</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Fans</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Club</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">KCTV</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Media</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+        </nav>
+        <!-- end of main navbar -->
+
+        <!-- Covid 19 Notification -->
+        <div class="covid-19-information text-center alert alert-dismissible fade show" role="alert">
+          <div class="row">
+            <div class="col-lg-12">
+              <span class="fw-bold">Stay Informed! </span><span>Visit the SA Department of Health's Website for COVID-19 updates:</span>
+              <a href="http://sacoronavirus.co.za" target="_blank">
+                <span class="fw-bold badge bg-dark">sacoronavirus.co.za</span>
+              </a>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          </div>
+        </div>
+        <!-- end of Covid 19 Notification -->
+
+    </header>
+    <!-- ******************* End of The Navbar Area ******************* -->
+
+
     <div class="container">
-        <h1>Kaizer Chiefs Web Redesign</h1>
+        
     </div>
 
     <script src="js/main.js"></script>
