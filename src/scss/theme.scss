@@ -2,7 +2,9 @@
 @import "./styles/bootstrap5"; // <-------- Loads Bootstrap5
 
 
+
 // Any additional imported files //
-@import "./styles/theme/theme";            // <-------- That's where you can add your own design. Thats your part!
-@import "./styles/navbar/navbar";
-@import "./styles/fixtures/fixtures";
+@import "styles/theme/theme";            // <-------- That's where you can add your own design. Thats your part!
+@import "styles/partials/navbar";
+@import "styles/partials/fixtures";
+@import "styles/partials/standings";

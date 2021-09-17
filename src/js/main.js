@@ -2,6 +2,10 @@
 import * as bootstrap from 'bootstrap'; 
 import '@fortawesome/fontawesome-free/css/all.css';
 
+// Usage: datatables
+import '../js/load.dataTables';
+
+
 
 let el_jsMainNav = document.querySelector('.js-main-nav');
 

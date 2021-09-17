@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="scss/theme.scss">
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.2/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap5.min.css">
 </head>
 <body>
     <!-- ******************* The Navbar Area ******************* -->
@@ -269,11 +271,97 @@
          </div>
       </div>
     </article>
-    <!-- ******************* end of Fixtures Area ******************* -->   
+    <!-- ******************* end of Fixtures Area ******************* -->
+    
+    
+    <!-- ******************* Standings Area ******************* -->
+    <div class="standings-wrapper pt-0">
+      <div class="container">
+          <div class="row">
+              <table id="teamStandingsTable" class="table table-striped dt-responsive nowrap" style="width:100%">
+                  <thead>
+                      <tr>
+                          <th class="standings-bold">POS</th>
+                          <th class="standings-bold">TEAM</th>
+                          <th>PTS</th>
+                          <th>P</th>
+                          <th>W</th>
+                          <th>D</th>
+                          <th>L</th>
+                          <th>GS</th>
+                          <th>GA</th>
+                          <th>GD</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>7</td>
+                          <td class="team-standings">
+                              <div class="team-standings-crest">
+                                  <img src="./assets/logo.png" alt="Golden Arrows">
+                              </div>
+                              <p class="team-standings-name">Golden Arrows</p>
+                          </td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                      </tr>
+                      <tr class="team-standings-active">
+                          <td>8</td>
+                          <td class="team-standings">
+                              <div class="team-standings-crest">
+                                  <img src="./assets/logo.png" alt="Kaizer Chiefs">
+                              </div>
+                              <p class="team-standings-name">Kaizer Chiefs</p>
+                          </td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                      </tr>
+                      <tr>
+                          <td>9</td>
+                          <td class="team-standings">
+                              <div class="team-standings-crest">
+                                  <img src="./assets/logo.png" alt="Maritzburg Utd">
+                              </div>
+                              <p class="team-standings-name">Maritzburg Utd</p>
+                          </td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                      </tr>
+                                          
+                  </tbody>
+              </table>
+              <!-- <p>Last Updated: 06 July 2021</p> -->
+          </div>
+      </div>
+    </div>
+    <!-- ******************* end of Standings Area ******************* -->
 
 
    
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.2/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap5.min.js"></script>
     <script src="js/main.js"></script>
     
 </body>
