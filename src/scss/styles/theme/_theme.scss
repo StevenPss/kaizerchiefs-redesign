@@ -1,7 +1,3 @@
-@import "./styles/bootstrap.scss";
-@import "./styles/variables.scss";
-@import "./styles//navbar/navbar.scss";
-
 :root {
     /* 
     font-size: 10px;
@@ -14,6 +10,7 @@
 body{
     font-family: $body_font;
     background-color: $secondary;
+    color: primary;
     height: 400vh;
 }
 
