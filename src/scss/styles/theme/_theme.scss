@@ -1,0 +1,173 @@
+:root {
+    /* 
+    font-size: 10px;
+    where 16px = 1.6rem
+    remember rem stands for 'relative to font-size of the root element' (which is identical to the selector 'html')
+    */
+    font-size: 16px;
+}
+
+body{
+    font-family: $body_font;
+    background-color: $secondary;
+    color: primary;
+    height: 400vh;
+}
+
+
+// Home Section Carousel
+.home-section {
+    .carousel-item {
+        min-height: 100vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 1;
+        &:before{
+            content: '';
+            position: absolute;
+            left:0;
+            top:0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        .container{
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            .featured-article{
+                .featured-article__title{
+                    font-size: 80px;
+                    color: $secondary;
+                    margin:0 0 10px;
+                    opacity: 0;
+                }
+                .featured-article__subtitle{
+                    font-size: 30px;
+                    margin:0;
+                    color: #eeeeee;
+                    opacity:0;
+                }
+                .featured-article__btn{
+                    border: 1px solid $accent;
+                    border-radius: 20px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    color: $secondary;
+                    &:hover{
+                        background-color: $accent;
+                        transition: all ease-in-out .2s;
+                    }
+                }
+            }
+        }
+        &.active{
+            h2{
+                animation: fadeInLeft 0.5s ease forwards;
+            }
+            p{
+                animation: fadeInRight 0.5s ease forwards;
+            }
+        }
+    }
+    .carousel-controls{
+        position: absolute;
+        left: 50%;
+        bottom: 40px;
+        z-index: 10;
+        transform: translateX(-50%);
+    }
+    .carousel-indicators{
+        position: relative;
+        margin:0;
+        li{
+            height: 60px;
+            width: 60px;
+            margin:0 5px;
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            border:3px solid transparent;
+            transition: all 0.3s ease;
+            &.active{
+                border-color: $secondary;
+                transform: scale(1.2);
+            }
+        }
+    }
+    .carousel-control-next, 
+    .carousel-control-prev{
+        height: 60px;
+        width: 60px;
+        opacity: 1;
+        z-index: 3;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        &:hover{
+            box-shadow: 0 0 10px $secondary;
+        }
+        i{
+            font-size: 30px;
+        }
+    }
+    .carousel-control-next{
+        right: -90px;
+    }
+    .carousel-control-prev{
+        left: -90px;
+    }
+}
+
+@keyframes fadeInLeft{
+	0%{
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+@keyframes fadeInRight{
+	0%{
+		opacity: 0;
+		transform: translateX(30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+@media(max-width: $md){
+    .home-section{
+        .carousel-control-next, 
+        .carousel-control-prev{
+              display: none;
+        }
+        .carousel-indicators li{
+            height: 60px;
+            width: 60px;
+        }
+        .carousel-item{
+            .container{
+                .featured-article{
+                    .featured-article__title{
+                        font-size: 45px;
+                    }
+                    .featured-article__subtitle{
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
