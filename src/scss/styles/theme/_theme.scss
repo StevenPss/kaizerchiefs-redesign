@@ -11,7 +11,14 @@ body{
     font-family: $body_font;
     background-color: $secondary;
     color: primary;
-    height: 400vh;
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
 }
 
 
