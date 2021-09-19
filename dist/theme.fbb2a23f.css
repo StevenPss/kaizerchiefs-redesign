@@ -11775,6 +11775,83 @@ a:hover {
     background: linear-gradient(to right, #faa61a 5%, transparent);
   }
 }
+.newsletter {
+  margin: 30px 0;
+}
+.newsletter .newsletter__header {
+  text-transform: capitalize;
+}
+.newsletter .newsletter__header .newsletter__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.5em;
+}
+.newsletter .newsletter__header .newsletter__subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+.newsletter .form-text-field {
+  height: 3.4em;
+  margin-bottom: 1.4em;
+  border-radius: 0;
+  outline: none;
+}
+.newsletter .form-text-field:focus {
+  border-color: #faa61a;
+  box-shadow: none;
+  outline: none;
+}
+.newsletter .form-check-input:checked {
+  background-color: #faa61a;
+  border-color: #faa61a;
+  box-shadow: 0 0 0 0.2rem rgba(250, 166, 26, 0.25);
+}
+.newsletter .form-check-input:focus:not(:checked) {
+  border-color: #faa61a;
+  box-shadow: 0 0 0 0.2rem rgba(250, 166, 26, 0.25) !important;
+}
+.newsletter .btn-primary {
+  text-transform: uppercase;
+  padding: 1.11em 2.78em;
+  margin-top: 1.39em;
+  border-radius: 0;
+  font-size: 0.9rem;
+  margin-left: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+.newsletter .btn-primary:hover {
+  background-color: #faa61a;
+  border-color: #faa61a;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.form-inline .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .form-group {
+    width: 100%;
+  }
+}
 #footer {
   background-color: #252525;
   color: #ffffff;
