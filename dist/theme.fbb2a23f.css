@@ -11761,6 +11761,12 @@ body {
   .merch .merch__container {
     grid-template-columns: auto;
   }
+  .merch .merch__container .merch__img img {
+    object-position: initial;
+  }
+  .merch .merch__container .merch__img::before {
+    background: linear-gradient(to right, #faa61a 5%, transparent);
+  }
 }
 
 /*# sourceMappingURL=/theme.fbb2a23f.css.map */

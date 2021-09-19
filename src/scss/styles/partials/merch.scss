@@ -66,6 +66,14 @@
     .merch {
         .merch__container{
             grid-template-columns: auto;
+            .merch__img{
+                img{
+                    object-position: initial;
+                }
+                &::before{
+                    background: linear-gradient(to right, #faa61a 5%, transparent);
+                }
+            }
         }
     }
 }
