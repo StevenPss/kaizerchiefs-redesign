@@ -11346,6 +11346,9 @@ a:hover {
   transition: all 0.3s ease-in-out;
 }
 
+#main-nav {
+  font-size: 1.5rem;
+}
 #main-nav .main-menu li a {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
@@ -11353,8 +11356,10 @@ a:hover {
 }
 #main-nav .main-menu li a:hover {
   color: #faa61a;
+  text-decoration: none;
 }
 #main-nav .main-menu li .dropdown-menu {
+  font-size: 1.5rem;
   background-color: #ffffff;
   border: 1px solid #faa61a;
   border-radius: 0;
@@ -11364,6 +11369,7 @@ a:hover {
 }
 #main-nav .main-menu li .dropdown-menu li a:hover {
   background-color: #faa61a;
+  text-decoration: none;
 }
 #main-nav .main-menu li .dropdown:hover .dropdown-menu {
   display: block;
@@ -11372,18 +11378,7 @@ a:hover {
 #main-nav .bg-dark {
   background-color: #252525 !important;
 }
-#main-nav .form-control {
-  border-color: #a6adbb !important;
-}
-#main-nav .btn-outline-success {
-  border-color: #faa61a !important;
-  color: #ffffff;
-}
-#main-nav .btn-outline-success:hover {
-  background-color: #faa61a !important;
-}
 
-/* ============ desktop view ============ */
 @media all and (min-width: 992px) {
   .navbar .nav-item .dropdown-menu {
     display: none;
