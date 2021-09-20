@@ -11347,7 +11347,7 @@ a:hover {
 }
 
 #main-nav {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 #main-nav .main-menu li a {
   text-transform: uppercase;
@@ -11359,7 +11359,7 @@ a:hover {
   text-decoration: none;
 }
 #main-nav .main-menu li .dropdown-menu {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   background-color: #ffffff;
   border: 1px solid #faa61a;
   border-radius: 0;
@@ -11394,7 +11394,7 @@ a:hover {
 }
 @media all and (max-width: 768px) {
   .navbar-brand img {
-    width: 54px;
+    width: 56px;
     height: auto;
     object-fit: contain;
   }
@@ -11410,6 +11410,7 @@ a:hover {
   width: 100%;
   border: none;
   border-radius: 0;
+  font-size: 1.6rem;
 }
 .covid-19-information a span {
   padding: 7px;
@@ -11555,6 +11556,10 @@ a:hover {
     background: linear-gradient(to right, #faa61a 20%, transparent);
   }
 }
+.latest-addition .latest-addition__card {
+  height: 100%;
+}
+
 .newsletter {
   padding: 40px 0;
 }
