@@ -2,9 +2,9 @@
     background-color: $primary;
     color: $secondary;
     font-size: 1.2rem;
-    padding: 30px 0;
+    padding: 32px 0;
     .footer__sponsors{
-        padding: 20px 0;
+        padding: 24px 0;
         max-width: 900px;
         margin-left: auto;
         margin-right: auto;
@@ -15,14 +15,14 @@
             flex-wrap: wrap;
             li{
                 list-style-type: none;
-                padding: 5px 0;
+                padding: 6px 0;
                 margin: 0;
                 a{
                     display: block;
                     text-align: center;
-                    padding: 0 10px;
+                    padding: 0 12px;
                     img{
-                        height: 50px;
+                        height: 48px;
                     }
                 }
             }
@@ -40,7 +40,7 @@
             padding: 0;
             li{
                 list-style: none;
-                padding: 5px 0;
+                padding: 6px 0;
                 a{
                     color: $secondary-500;
                     &:hover{
@@ -53,8 +53,8 @@
             li{
                 display:inline;
                 font-size: 1.6rem;
-                padding-left: 5px;
-                padding-right: 10px;
+                padding-left: 0;
+                padding-right: 16px;
             }
         }
         .footer__img--filter{
@@ -69,7 +69,7 @@
 @media(max-width: $sm){
     #footer{
         .footer__sponsors{
-            padding: 20px 0;
+            padding: 24px 0;
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
@@ -77,9 +77,7 @@
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 grid-template-rows: auto; 
-                gap: 30px 0;
-                // align-items: center;
-                // justify-items: center;
+                gap: 32px 0;
                 padding: 0;
                 margin: 0;
                 li{
@@ -87,7 +85,7 @@
                     a{
                         display: block;
                         text-align: center;
-                        padding: 0 10px;
+                        padding: 0 12px;
                         img{
                             height: 40px;
                         }
