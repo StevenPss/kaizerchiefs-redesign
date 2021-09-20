@@ -10,7 +10,7 @@
 body{
     font-family: $body_font;
     background-color: $secondary;
-    color: primary;
+    color: $primary;
     height: 100vh;
 }
 
@@ -49,9 +49,9 @@ a{
             text-align: center;
             .featured-article{
                 .featured-article__title{
-                    font-size: 8rem;
+                    font-size: 7.2rem;
                     color: $secondary;
-                    margin: 0 0 10px;
+                    margin: 0 0 16px;
                     opacity: 0;
                 }
                 .featured-article__subtitle{
@@ -62,8 +62,8 @@ a{
                 }
                 .featured-article__btn{
                     border: 1px solid $accent;
-                    border-radius: 20px;
-                    padding: 5px 25px;
+                    border-radius: 24px;
+                    padding: 4px 24px;
                     font-size: 1.6rem;
                     color: $secondary;
                     &:hover{
@@ -94,9 +94,9 @@ a{
         position: relative;
         margin: 0;
         li{
-            height: 50px;
-            width: 50px;
-            margin: 0 5px;
+            height: 48px;
+            width: 48px;
+            margin: 0 6px;
             border-radius: 50%;
             background-position: center;
             background-size: cover;
@@ -110,8 +110,8 @@ a{
     }
     .carousel-control-next, 
     .carousel-control-prev{
-        height: 60px;
-        width: 60px;
+        height: 64px;
+        width: 64px;
         opacity: 1;
         z-index: 3;
         top: 50%;
@@ -123,21 +123,21 @@ a{
             box-shadow: rgba($secondary, 0.1) 0px 6px 24px 0px, rgba($secondary, 0.09) 0px 0px 0px 1px;
         }
         i{
-            font-size: 3rem;
+            font-size: 3.2rem;
         }
     }
     .carousel-control-next{
-        right: -90px;
+        right: -88px;
     }
     .carousel-control-prev{
-        left: -90px;
+        left: -88px;
     }
 }
 
 @keyframes fadeInLeft{
 	0%{
 		opacity: 0;
-		transform: translateX(-30px);
+		transform: translateX(-32px);
 	}
 	100%{
 		opacity: 1;
@@ -147,7 +147,7 @@ a{
 @keyframes fadeInRight{
 	0%{
 		opacity: 0;
-		transform: translateX(30px);
+		transform: translateX(32px);
 	}
 	100%{
 		opacity: 1;
@@ -162,17 +162,17 @@ a{
               display: none;
         }
         .carousel-indicators li{
-            height: 60px;
-            width: 60px;
+            height: 64px;
+            width: 64px;
         }
         .carousel-item{
             .container{
                 .featured-article{
                     .featured-article__title{
-                        font-size: 4.5rem;
+                        font-size: 4rem;
                     }
                     .featured-article__subtitle{
-                        font-size: 2.2rem;
+                        font-size: 3.2rem;
                     }
                 }
             }
