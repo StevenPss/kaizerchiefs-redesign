@@ -11116,10 +11116,10 @@ textarea.form-control-lg {
 :root {
   /* 
   font-size: 10px;
-  where 16px = 1.6rem
+  where 10px = 1rem
   remember rem stands for 'relative to font-size of the root element' (which is identical to the selector 'html')
   */
-  font-size: 16px;
+  font-size: 10px;
 }
 
 body {
@@ -11151,7 +11151,7 @@ a:hover {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(37, 37, 37, 0.6);
   z-index: -1;
 }
 .home-section .carousel-item .container {
@@ -11162,13 +11162,13 @@ a:hover {
   text-align: center;
 }
 .home-section .carousel-item .container .featured-article .featured-article__title {
-  font-size: 80px;
+  font-size: 8rem;
   color: #ffffff;
   margin: 0 0 10px;
   opacity: 0;
 }
 .home-section .carousel-item .container .featured-article .featured-article__subtitle {
-  font-size: 30px;
+  font-size: 3rem;
   margin: 0;
   color: #eeeeee;
   opacity: 0;
@@ -11176,12 +11176,13 @@ a:hover {
 .home-section .carousel-item .container .featured-article .featured-article__btn {
   border: 1px solid #faa61a;
   border-radius: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 5px 25px;
+  font-size: 1.6rem;
   color: #ffffff;
 }
 .home-section .carousel-item .container .featured-article .featured-article__btn:hover {
   background-color: #faa61a;
+  text-decoration: none;
   transition: all ease-in-out 0.2s;
 }
 .home-section .carousel-item.active h2, .home-section .carousel-item.active .h2 {
@@ -11202,13 +11203,13 @@ a:hover {
   margin: 0;
 }
 .home-section .carousel-indicators li {
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   margin: 0 5px;
   border-radius: 50%;
   background-position: center;
   background-size: cover;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   transition: all 0.3s ease;
 }
 .home-section .carousel-indicators li.active {
@@ -11229,11 +11230,11 @@ a:hover {
 }
 .home-section .carousel-control-next:hover,
 .home-section .carousel-control-prev:hover {
-  box-shadow: 0 0 10px #ffffff;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 6px 24px 0px, rgba(255, 255, 255, 0.09) 0px 0px 0px 1px;
 }
 .home-section .carousel-control-next i,
 .home-section .carousel-control-prev i {
-  font-size: 30px;
+  font-size: 3rem;
 }
 .home-section .carousel-control-next {
   right: -90px;
@@ -11272,10 +11273,10 @@ a:hover {
     width: 60px;
   }
   .home-section .carousel-item .container .featured-article .featured-article__title {
-    font-size: 45px;
+    font-size: 4.5rem;
   }
   .home-section .carousel-item .container .featured-article .featured-article__subtitle {
-    font-size: 22px;
+    font-size: 2.2rem;
   }
 }
 .secondary-nav, .header--sticky {
@@ -11417,516 +11418,6 @@ a:hover {
 }
 .covid-19-information a span {
   padding: 7px;
-}
-
-.fixtures {
-  padding: 30px 0;
-}
-.fixtures .fixtures__item .fixtures__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 20px;
-}
-.fixtures .fixtures__item .fixtures__header .fixtures__header-month {
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  text-transform: capitalize;
-}
-.fixtures .fixtures__item .fixtures__header .fixtures__header-note {
-  font-size: 0.82rem;
-  display: flex;
-  align-items: center;
-  margin: 0;
-}
-.fixtures .fixtures__item .fixtures__header .fixtures__header-note span i {
-  font-size: 1.2rem;
-  margin-right: 4px;
-}
-.fixtures .fixtures__item .fixtures__header .fixtures__header-note .fixtures__header-note-mobile {
-  display: none;
-}
-.fixtures .fixtures__item .fixtures-list {
-  padding: 0;
-  margin: 0;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list {
-  padding: 0.5rem 0 1.5rem;
-  list-style: none;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item {
-  transition: 0.1s;
-  position: relative;
-  width: 100%;
-  max-width: 134rem;
-  margin: 0 auto;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container-box-shadow {
-  border-radius: 3px;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
-  background: #fff;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container {
-  padding: 1rem 0;
-  border-bottom: 1px solid #ebebeb;
-  border-top: 1px solid #ebebeb;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition {
-  display: flex;
-  align-items: center;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-icon {
-  width: 8%;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-icon .match-item__competition-img {
-  margin: 0 auto;
-  padding-right: 2rem;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-icon .match-item__competition-img img {
-  max-width: 100%;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info {
-  display: flex;
-  flex: 1 0;
-  justify-content: space-between;
-  align-items: center;
-  border-left: 1px solid #ebebeb;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__date-location {
-  display: flex;
-  flex-direction: column;
-  padding: 0 0 0 2rem;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__date-location .match-item__date {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.8rem;
-  margin-bottom: 0.3rem;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__date-location .match-item__stadium {
-  color: #737373;
-  font-size: 0.75rem;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container {
-  display: flex;
-  flex: 1 0;
-  align-items: center;
-  padding: 0 1rem;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container {
-  display: flex;
-  align-items: center;
-  font-size: 0.95rem;
-  font-family: "Montserrat", sans-serif;
-  width: 50%;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container:first-child {
-  justify-content: flex-end;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container .match-item__team--home {
-  padding-right: 0.8rem;
-  text-align: right;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container .match-item__team--away {
-  padding-left: 0.8rem;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container .match-item__team-crest {
-  max-width: 36px;
-  max-height: 36px;
-  height: auto;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail {
-  margin: 0 1rem;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__kickoff {
-  display: inline-flex;
-  flex-wrap: wrap;
-  padding: 0.3rem 0;
-  width: 6rem;
-  font-size: 0.9rem;
-  justify-content: center;
-  background: linear-gradient(#f7f7f7, #f7f7f7 50%, #ebebeb 0);
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__kickoff .match-item__kickoff-label {
-  padding-right: 0.5rem;
-  font-family: "Montserrat", sans-serif;
-  white-space: nowrap;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__score {
-  display: inline-flex;
-  font-size: 1.2rem;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__score span {
-  width: 3rem;
-  height: 2rem;
-  line-height: 2rem;
-  text-align: center;
-  background: linear-gradient(#152638, #324150 50%, #061729 0);
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__score span:first-child {
-  border-right: 1px solid #061729;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__score--completed {
-  color: #ffffff;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__score--completed span {
-  background: linear-gradient(#152638, #324150 50%, #061729 0);
-}
-
-@media screen and (max-width: 576px) {
-  .fixtures .fixtures__item .fixtures__header {
-    padding: 0 1rem;
-  }
-  .fixtures .fixtures__item .fixtures__header .fixtures__header-month {
-    font-size: 1.3rem;
-  }
-  .fixtures .fixtures__item .fixtures__header .fixtures__header-note span:first-child {
-    display: none;
-  }
-  .fixtures .fixtures__item .fixtures__header .fixtures__header-note .fixtures__header-note-mobile {
-    display: block;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition {
-    flex-direction: column;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-icon {
-    width: 14%;
-    padding-bottom: 0.6rem;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-icon .match-item__competition-img {
-    padding-right: 0;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info {
-    flex-direction: column;
-    border-left: none;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__date-location {
-    padding: 0;
-    align-items: center;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__date-location .match-item__date {
-    font-size: 0.75rem;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__date-location .match-item__stadium {
-    font-size: 0.75rem;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container {
-    font-size: 0.72rem;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container:first-child {
-    flex-direction: column-reverse;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container:last-child {
-    flex-direction: column;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container .match-item__team--home {
-    padding-right: 0;
-    text-align: center;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container .match-item__team--away {
-    padding-left: 0;
-    text-align: center;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container .match-item__team-crest {
-    margin-bottom: 0.75rem;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__kickoff {
-    font-size: 0.8rem;
-  }
-}
-.standings-wrapper {
-  padding: 30px 0;
-}
-.standings-wrapper h2, .standings-wrapper .h2 {
-  font-family: "Montserrat", sans-serif;
-  padding-bottom: 20px;
-}
-.standings-wrapper .standings-bold {
-  font-weight: bold !important;
-  color: #252525 !important;
-}
-.standings-wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before, .standings-wrapper table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
-  background-color: #faa61a;
-}
-.standings-wrapper .table {
-  font-size: 1rem;
-}
-.standings-wrapper .table td, .standings-wrapper .table th {
-  padding: 1rem;
-  vertical-align: top;
-  border: none;
-}
-.standings-wrapper .table thead th {
-  vertical-align: bottom;
-  border: none;
-  color: #a6adbb;
-}
-.standings-wrapper .table tbody td:first-child {
-  font-weight: bold;
-}
-.standings-wrapper #teamStandingsTable td, .standings-wrapper #teamStandingsTable th {
-  vertical-align: middle;
-}
-.standings-wrapper table.dataTable.no-footer {
-  border: none;
-}
-.standings-wrapper .dataTables_wrapper {
-  width: 100%;
-}
-.standings-wrapper .team-standings-active {
-  background-color: #252525;
-  color: #ffffff;
-}
-.standings-wrapper .team-standings-active p {
-  font-weight: bold;
-}
-.standings-wrapper .team-standings {
-  display: flex;
-  align-items: center;
-}
-.standings-wrapper .team-standings .team-standings-crest {
-  flex: 0 0 25px;
-  margin-right: 10px;
-}
-.standings-wrapper .team-standings .team-standings-crest img {
-  max-width: 100%;
-}
-.standings-wrapper .team-standings .team-standings-name {
-  margin: 0;
-  text-transform: capitalize;
-}
-
-@media screen and (max-width: 576px) {
-  .standings-wrapper .table {
-    font-size: 0.8rem;
-  }
-}
-.merch {
-  display: grid;
-  margin: 30px 0;
-  width: 100%;
-  height: 400px;
-  font-family: "Montserrat", sans-serif;
-  color: #ffffff;
-  background: #faa61a;
-  position: relative;
-  overflow: hidden;
-}
-.merch .merch__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 30px;
-  align-items: center;
-}
-.merch .merch__container .merch__promo {
-  max-width: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
-.merch .merch__container .merch__promo p {
-  font-size: 2.5rem;
-}
-.merch .merch__container .merch__promo .btn {
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 0.9rem;
-  padding: 10px 30px;
-}
-.merch .merch__container .merch__promo .btn:hover {
-  background-color: #252525;
-  border-color: #252525;
-  color: #ffffff;
-}
-.merch .merch__container .merch__img {
-  display: flex;
-  position: absolute;
-  height: 100%;
-  right: 0;
-  top: 0;
-}
-.merch .merch__container .merch__img img {
-  z-index: 5;
-  max-width: 100vw;
-  height: 100%;
-  object-position: right top;
-  object-fit: cover;
-}
-.merch .merch__container .merch__img::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  z-index: 6;
-  background: linear-gradient(to right, #faa61a 5%, transparent);
-}
-
-@media screen and (max-width: 576px) {
-  .merch .merch__container {
-    grid-template-columns: auto;
-  }
-  .merch .merch__container .merch__img img {
-    object-position: initial;
-  }
-  .merch .merch__container .merch__img::before {
-    background: linear-gradient(to right, #faa61a 5%, transparent);
-  }
-}
-.newsletter {
-  margin: 30px 0;
-}
-.newsletter .newsletter__header {
-  text-transform: capitalize;
-}
-.newsletter .newsletter__header .newsletter__title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.8rem;
-  margin-bottom: 0.5em;
-}
-.newsletter .newsletter__header .newsletter__subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 1em;
-}
-.newsletter .form-text-field {
-  height: 3.4em;
-  margin-bottom: 1.4em;
-  border-radius: 0;
-  outline: none;
-}
-.newsletter .form-text-field:focus {
-  border-color: #faa61a;
-  box-shadow: none;
-  outline: none;
-}
-.newsletter .form-check-input:checked {
-  background-color: #faa61a;
-  border-color: #faa61a;
-  box-shadow: 0 0 0 0.2rem rgba(250, 166, 26, 0.25);
-}
-.newsletter .form-check-input:focus:not(:checked) {
-  border-color: #faa61a;
-  box-shadow: 0 0 0 0.2rem rgba(250, 166, 26, 0.25) !important;
-}
-.newsletter .btn-primary {
-  text-transform: uppercase;
-  padding: 1.11em 2.78em;
-  margin-top: 1.39em;
-  border-radius: 0;
-  font-size: 0.9rem;
-  margin-left: 15px;
-  font-family: "Montserrat", sans-serif;
-}
-.newsletter .btn-primary:hover {
-  background-color: #faa61a;
-  border-color: #faa61a;
-}
-
-.form-group {
-  margin-bottom: 1rem;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.form-inline .form-control {
-  display: inline-block;
-  width: auto;
-  vertical-align: middle;
-}
-
-.form-row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -5px;
-  margin-left: -5px;
-}
-
-label {
-  margin-bottom: 0.5rem;
-}
-
-@media (max-width: 576px) {
-  .form-group {
-    width: 100%;
-  }
-}
-#footer {
-  background-color: #252525;
-  color: #ffffff;
-  font-size: 12px;
-  padding: 30px 0;
-}
-#footer .footer__sponsors {
-  padding: 20px 0;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-#footer .footer__sponsors ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-#footer .footer__sponsors ul li {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-#footer .footer__sponsors ul li a {
-  display: block;
-  text-align: center;
-  padding: 0 10px;
-}
-#footer .footer__sponsors ul li a img {
-  height: 25px;
-}
-#footer .footer__sitemap {
-  border-top: 2px solid #faa61a;
-  padding: 40px 0;
-}
-#footer .footer__sitemap h6, #footer .footer__sitemap .h6 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-#footer .footer__sitemap ul {
-  padding: 0;
-}
-#footer .footer__sitemap ul li {
-  list-style: none;
-  padding: 5px 0;
-}
-#footer .footer__sitemap ul li a {
-  color: #a6adbb;
-}
-#footer .footer__sitemap ul li a:hover {
-  color: #faa61a;
-}
-#footer .footer__sitemap .footer__social-icons li {
-  display: inline;
-  font-size: 16px;
-  padding-left: 5px;
-  padding-right: 10px;
-}
-#footer .footer__copyright {
-  color: #a6adbb;
-}
-
-@media (min-width: 768px) {
-  #footer .footer__sponsors ul {
-    min-height: 100px;
-  }
-  #footer .footer__sponsors ul li a {
-    padding: 10px 30px;
-  }
-  #footer .footer__sponsors ul li a img {
-    height: 50px;
-  }
 }
 
 /*# sourceMappingURL=/theme.fbb2a23f.css.map */
