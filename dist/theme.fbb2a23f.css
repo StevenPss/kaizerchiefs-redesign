@@ -11415,4 +11415,109 @@ a:hover {
   padding: 7px;
 }
 
+#footer {
+  background-color: #252525;
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 30px 0;
+}
+#footer .footer__sponsors {
+  padding: 20px 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#footer .footer__sponsors .footer__sponsors-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#footer .footer__sponsors .footer__sponsors-list li {
+  list-style-type: none;
+  padding: 5px 0;
+  margin: 0;
+}
+#footer .footer__sponsors .footer__sponsors-list li a {
+  display: block;
+  text-align: center;
+  padding: 0 10px;
+}
+#footer .footer__sponsors .footer__sponsors-list li a img {
+  height: 50px;
+}
+#footer .footer__sitemap {
+  border-top: 2px solid #faa61a;
+  padding: 40px 0;
+}
+#footer .footer__sitemap h6, #footer .footer__sitemap .h6 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+#footer .footer__sitemap ul {
+  padding: 0;
+}
+#footer .footer__sitemap ul li {
+  list-style: none;
+  padding: 5px 0;
+}
+#footer .footer__sitemap ul li a {
+  color: #a6adbb;
+}
+#footer .footer__sitemap ul li a:hover {
+  color: #faa61a;
+}
+#footer .footer__sitemap .footer__social-icons li {
+  display: inline;
+  font-size: 1.6rem;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+#footer .footer__sitemap .footer__img--filter {
+  filter: grayscale(1) contrast(0.9) opacity(0.9);
+}
+#footer .footer__copyright {
+  color: #a6adbb;
+}
+
+@media (max-width: 576px) {
+  #footer .footer__sponsors {
+    padding: 20px 0;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #footer .footer__sponsors .footer__sponsors-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 30px 0;
+    padding: 0;
+    margin: 0;
+  }
+  #footer .footer__sponsors .footer__sponsors-list li {
+    list-style-type: none;
+  }
+  #footer .footer__sponsors .footer__sponsors-list li a {
+    display: block;
+    text-align: center;
+    padding: 0 10px;
+  }
+  #footer .footer__sponsors .footer__sponsors-list li a img {
+    height: 40px;
+  }
+}
+@media (min-width: 768px) {
+  #footer .footer__sponsors .footer__sponsors-list {
+    min-height: 100px;
+  }
+  #footer .footer__sponsors .footer__sponsors-list li a {
+    padding: 10px 30px;
+  }
+  #footer .footer__sponsors .footer__sponsors-list li a img {
+    height: 50px;
+  }
+}
+
 /*# sourceMappingURL=/theme.fbb2a23f.css.map */
