@@ -15,20 +15,21 @@
         gap: 0px 30px; 
         align-items: center;
         .merch__promo{
-            max-width: 800px;
+            max-width: 900px;
             display: flex;
             justify-content: center;
             align-items: center;
             z-index: 10;
             p{
-                font-size: 3.2rem;
+                font-size: 4rem;
+                line-height: 48px;
             }
             .btn{
                 font-family: $body_font;
                 text-transform: uppercase;
                 font-weight: bold;
                 font-size: 1.4rem;
-                padding: 10px 30px;
+                padding: 12px 32px;
                 background-color: $primary;
                 border-color: $primary;
                 color: $secondary;
@@ -70,6 +71,11 @@
     .merch {
         .merch__container{
             grid-template-columns: auto;
+            .merch__promo{
+                p{
+                    font-size: 3.2rem;
+                }
+            }
             .merch__img{
                 img{
                     object-position: initial;

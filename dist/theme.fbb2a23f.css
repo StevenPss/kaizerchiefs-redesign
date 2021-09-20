@@ -11492,21 +11492,22 @@ a:hover {
   align-items: center;
 }
 .merch .merch__container .merch__promo {
-  max-width: 800px;
+  max-width: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10;
 }
 .merch .merch__container .merch__promo p {
-  font-size: 3.2rem;
+  font-size: 4rem;
+  line-height: 48px;
 }
 .merch .merch__container .merch__promo .btn {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.4rem;
-  padding: 10px 30px;
+  padding: 12px 32px;
   background-color: #252525;
   border-color: #252525;
   color: #ffffff;
@@ -11544,6 +11545,9 @@ a:hover {
 @media screen and (max-width: 576px) {
   .merch .merch__container {
     grid-template-columns: auto;
+  }
+  .merch .merch__container .merch__promo p {
+    font-size: 3.2rem;
   }
   .merch .merch__container .merch__img img {
     object-position: initial;
