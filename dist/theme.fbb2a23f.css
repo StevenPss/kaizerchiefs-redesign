@@ -11417,11 +11417,7 @@ a:hover {
 }
 
 .standings-wrapper {
-  padding: 30px 0;
-}
-.standings-wrapper h2, .standings-wrapper .h2 {
-  font-family: "Montserrat", sans-serif;
-  padding-bottom: 20px;
+  padding: 32px 0;
 }
 .standings-wrapper .standings-bold {
   font-weight: bold !important;
@@ -11467,7 +11463,7 @@ a:hover {
   align-items: center;
 }
 .standings-wrapper .team-standings .team-standings-crest {
-  flex: 0 0 25px;
+  flex: 0 0 24px;
   margin-right: 10px;
 }
 .standings-wrapper .team-standings .team-standings-crest img {
