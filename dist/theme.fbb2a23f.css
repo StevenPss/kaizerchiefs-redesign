@@ -11564,16 +11564,16 @@ a:hover {
 }
 .newsletter .newsletter__header .newsletter__title {
   font-family: "Montserrat", sans-serif;
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 3.2rem;
+  margin-bottom: 16px;
 }
 .newsletter .newsletter__header .newsletter__subtitle {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+  font-size: 2.4rem;
+  margin-bottom: 24px;
 }
 .newsletter .form-text-field {
-  height: 50px;
-  margin-bottom: 30px;
+  height: 48px;
+  margin-bottom: 32px;
   border-radius: 0;
   outline: none;
 }
@@ -11583,21 +11583,21 @@ a:hover {
   outline: none;
 }
 .newsletter .form-check {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 .newsletter .form-check-input:checked {
   background-color: #faa61a;
   border-color: #faa61a;
-  box-shadow: 0 0 0 3px rgba(250, 166, 26, 0.25);
+  box-shadow: 0 0 0 4px rgba(250, 166, 26, 0.25);
 }
 .newsletter .form-check-input:focus:not(:checked) {
   border-color: #faa61a;
-  box-shadow: 0 0 0 3px rgba(250, 166, 26, 0.25) !important;
+  box-shadow: 0 0 0 4px rgba(250, 166, 26, 0.25) !important;
 }
 .newsletter .btn-primary {
   text-transform: uppercase;
-  padding: 15px 40px;
-  margin-top: 10px;
+  padding: 16px 40px;
+  margin-top: 12px;
   border-radius: 0;
   font-size: 1.2rem;
   margin-left: 15px;
@@ -11608,12 +11608,12 @@ a:hover {
   border-color: #faa61a;
 }
 .newsletter .form-group {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   padding-right: 15px;
   padding-left: 15px;
 }
 .newsletter .form-group input {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 .newsletter .form-inline .form-control {
   display: inline-block;
