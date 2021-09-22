@@ -11288,6 +11288,12 @@ a:hover {
     font-size: 3.2rem;
   }
 }
+@media (max-width: 576px) {
+  .home-section .carousel-indicators li {
+    height: 40px;
+    width: 40px;
+  }
+}
 .secondary-nav, .header--sticky {
   position: sticky;
   top: 0;
