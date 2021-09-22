@@ -21,6 +21,15 @@ a{
     }
 }
 
+.psuedo-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
 
 // Home Section Carousel
 .home-section {
@@ -176,6 +185,15 @@ a{
                     }
                 }
             }
+        }
+    }
+}
+
+@media(max-width: $sm){
+    .home-section{
+        .carousel-indicators li{
+            height: 40px;
+            width: 40px;
         }
     }
 }
