@@ -11136,6 +11136,15 @@ a:hover {
   text-decoration: underline;
 }
 
+.psuedo-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
 .home-section .carousel-item {
   min-height: 100vh;
   background-position: center;
