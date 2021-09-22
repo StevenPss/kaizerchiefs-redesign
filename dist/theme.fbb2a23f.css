@@ -11431,6 +11431,217 @@ a:hover {
   padding: 7px;
 }
 
+.fixtures {
+  padding: 40px 0;
+}
+.fixtures .fixtures__item .fixtures__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+}
+.fixtures .fixtures__item .fixtures__header .fixtures__header-month {
+  font-size: 2.4rem;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  text-transform: capitalize;
+}
+.fixtures .fixtures__item .fixtures__header .fixtures__header-note {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.fixtures .fixtures__item .fixtures__header .fixtures__header-note span i {
+  font-size: 1.4rem;
+  margin-right: 4px;
+}
+.fixtures .fixtures__item .fixtures__header .fixtures__header-note .fixtures__header-note-mobile {
+  display: none;
+}
+.fixtures .fixtures__item .fixtures-list {
+  padding: 0;
+  margin: 0;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list {
+  padding: 10px 0 20px;
+  list-style: none;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item {
+  transition: 0.1s;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container-box-shadow {
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background: #fff;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container {
+  padding: 20px 0;
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition {
+  display: flex;
+  align-items: center;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-icon {
+  width: 8%;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-icon .match-item__competition-img {
+  margin: 0 auto;
+  padding-right: 20px;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-icon .match-item__competition-img img {
+  max-width: 100%;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info {
+  display: flex;
+  flex: 1 0;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 1px solid #ebebeb;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__date-location {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 10px 20px;
+  flex: 0 0 20px;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__date-location .match-item__date {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 3px;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__date-location .match-item__stadium {
+  color: #737373;
+  font-size: 1.2rem;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container {
+  display: flex;
+  flex: 1 0;
+  align-items: center;
+  padding: 0 10px;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  width: 50%;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container:first-child {
+  justify-content: flex-end;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container .match-item__team--home {
+  padding-right: 11px;
+  text-align: right;
+  line-height: 20px;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container .match-item__team--away {
+  padding-left: 11px;
+  line-height: 20px;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container .match-item__team-crest {
+  max-width: 36px;
+  max-height: 36px;
+  height: auto;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail {
+  margin: 0 10px;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__kickoff {
+  display: inline-flex;
+  flex-wrap: wrap;
+  padding: 4px 0;
+  width: 70px;
+  font-size: 1.5rem;
+  justify-content: center;
+  background: linear-gradient(#f7f7f7, #f7f7f7 50%, #ebebeb 0);
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__kickoff .match-item__kickoff-label {
+  padding-right: 3px;
+  font-family: "Montserrat", sans-serif;
+  white-space: nowrap;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__score {
+  display: inline-flex;
+  font-size: 2rem;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__score span {
+  width: 32px;
+  height: 24px;
+  line-height: 21px;
+  text-align: center;
+  background: linear-gradient(#152638, #324150 50%, #061729 0);
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__score span:first-child {
+  border-right: 1px solid #061729;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__score--completed {
+  color: #ffffff;
+}
+.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__score--completed span {
+  background: linear-gradient(#152638, #324150 50%, #061729 0);
+}
+
+@media screen and (max-width: 576px) {
+  .fixtures .fixtures__item .fixtures__header {
+    flex-direction: column;
+    align-items: start;
+  }
+  .fixtures .fixtures__item .fixtures-list {
+    padding: 10px 0 30px;
+  }
+  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container {
+    padding: 10px 0;
+  }
+  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition {
+    flex-direction: column;
+  }
+  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-icon {
+    width: 14%;
+  }
+  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-icon .match-item__competition-img {
+    padding-right: 0;
+  }
+  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info {
+    flex-direction: column;
+    border-left: none;
+  }
+  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__date-location {
+    padding: 0;
+    align-items: center;
+  }
+  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__date-location .match-item__date {
+    font-size: 1.25rem;
+  }
+  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container {
+    font-size: 1.2rem;
+  }
+  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container:first-child {
+    flex-direction: column-reverse;
+  }
+  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container:last-child {
+    flex-direction: column;
+  }
+  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container .match-item__team--home {
+    padding-right: 0;
+    text-align: center;
+    line-height: 18px;
+  }
+  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container .match-item__team--away {
+    padding-left: 0;
+    text-align: center;
+    line-height: 18px;
+  }
+  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container .match-item__team-crest {
+    margin-bottom: 10px;
+  }
+}
 .standings-wrapper {
   padding: 32px 0;
 }
