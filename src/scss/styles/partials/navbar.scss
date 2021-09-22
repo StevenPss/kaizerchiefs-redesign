@@ -57,18 +57,18 @@
     }
 }
 
-
 // Navbar
 .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link{
     color: $accent;
 }
 .scrolled-down{
-  transform:translateY(-100%); transition: all 0.3s ease-in-out;
+  transform: translateY(-100%); transition: all 0.3s ease-in-out;
 }
 .scrolled-up{
-  transform:translateY(0); transition: all 0.3s ease-in-out;
+  transform: translateY(0); transition: all 0.3s ease-in-out;
 }
 #main-nav{
+    font-size: 1.6rem;
     .main-menu{
         li{
             a{
@@ -77,9 +77,11 @@
                 color: $secondary;
                 &:hover{
                     color: $accent;
+                    text-decoration: none;
                 }
             }
             .dropdown-menu{
+                font-size: 1.6rem;
                 background-color: $secondary;
                 border: 1px solid $accent;
                 border-radius: 0;
@@ -88,6 +90,7 @@
                         color: $primary;
                         &:hover{
                             background-color: $accent;
+                            text-decoration: none;
                         }
                     }
                 }
@@ -95,25 +98,14 @@
             .dropdown:hover .dropdown-menu {
                 display: block;
                 margin-top: 0;
-             }
+            }
         }
     }
     .bg-dark{
         background-color: $primary!important;
     }
-    .form-control{
-        border-color: $secondary-500!important;
-    }
-    .btn-outline-success{
-        border-color: $accent!important;
-        color: $secondary;
-        &:hover{
-            background-color: $accent!important;
-        }
-    }
 }
 
-/* ============ desktop view ============ */
 @media all and (min-width: $lg) {
 	.navbar .nav-item .dropdown-menu{ display: none; }
 	.navbar .nav-item:hover .dropdown-menu{ display: block; }
@@ -122,7 +114,7 @@
 @media all and (max-width: $md) {
 	.navbar-brand{
         img{
-            width: 54px;
+            width: 56px;
             height: auto;
             object-fit: contain;
         }
@@ -130,7 +122,6 @@
 }
 
 // Covid 19 Notification
-
 .covid-19-information{
     position: fixed;
     bottom: 0;
@@ -142,6 +133,7 @@
     width: 100%;
     border: none;
     border-radius: 0;
+    font-size: 1.6rem;
     a{
         span{
             padding: 7px;

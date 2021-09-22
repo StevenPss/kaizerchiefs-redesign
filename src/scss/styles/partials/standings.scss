@@ -1,10 +1,5 @@
 .standings-wrapper{
-    padding: 30px 0;
-    // background: url('/assets/img/sort_both.png');
-    h2{
-        font-family: $heading_font;
-        padding-bottom: 20px;
-    }
+    padding: 32px 0;
     .standings-bold{
         font-weight: bold!important;
         color: $primary!important;
@@ -12,19 +7,10 @@
     table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before {
         background-color: $accent;
     }
-    table.dataTable thead .sorting_asc {
-        // background-image: url('/assets/img/sort_asc.png') !important;
-    }
-    table.dataTable thead .sorting_desc {
-        // background-image: url('/assets/img/sort_desc.png') !important;
-    }
-    table.dataTable thead .sorting {
-        // background-image: url("/assets/img/sort_both.png") !important;
-    }
     .table{
-        font-size: 1rem;
+        font-size: 1.6rem;
         td, th {
-            padding: 1rem;
+            padding: 20px;
             vertical-align: top;
             //border-top: 1px solid #dee2e6;
             border: none;
@@ -67,7 +53,7 @@
         display: flex;
         align-items: center;
         .team-standings-crest{
-            flex: 0 0 25px;
+            flex: 0 0 24px;
             margin-right: 10px;
             img{
                 max-width: 100%;
@@ -76,14 +62,6 @@
         .team-standings-name{
             margin: 0;
             text-transform: capitalize;
-        }
-    }
-}
-
-@media screen and (max-width: $sm){
-    .standings-wrapper {
-        .table{
-            font-size: .8rem;
         }
     }
 }

@@ -1,20 +1,21 @@
+
 .newsletter{
-    margin: 30px 0;
+    padding: 40px 0;
     .newsletter__header{
         text-transform: capitalize;
         .newsletter__title{
             font-family: $heading_font;
-            font-size: 1.8rem;
-            margin-bottom: .5em;
+            font-size: 3.2rem;
+            margin-bottom: 16px;
         }
         .newsletter__subtitle{
-            font-size: 1.2rem;
-            margin-bottom: 1em;
+            font-size: 2.4rem;
+            margin-bottom: 24px;
         }
     }
     .form-text-field{
-        height: 3.4em;
-        margin-bottom: 1.4em;
+        height: 48px;
+        margin-bottom: 32px;
         border-radius: 0;
         outline: none;
         &:focus{
@@ -23,21 +24,24 @@
             outline: none;
         }
     }
+    .form-check{
+        font-size: 1.6rem;
+    }
     .form-check-input:checked {
         background-color: $accent;
         border-color: $accent;
-        box-shadow: 0 0 0 0.2rem rgba($accent, 0.25);
+        box-shadow: 0 0 0 4px rgba($accent, 0.25);
     }
     .form-check-input:focus:not(:checked) {
         border-color: $accent;
-        box-shadow: 0 0 0 0.2rem rgba($accent, 0.25) !important;
+        box-shadow: 0 0 0 4px rgba($accent, 0.25) !important;
     }
     .btn-primary{
         text-transform: uppercase;
-        padding: 1.11em 2.78em;
-        margin-top: 1.39em;
+        padding: 16px 40px;
+        margin-top: 12px;
         border-radius: 0;
-        font-size: .9rem;
+        font-size: 1.2rem;
         margin-left: 15px;
         font-family: $heading_font;
         &:hover{
@@ -45,25 +49,28 @@
             border-color: $accent;
         }
     }
-}
-.form-group {
-    margin-bottom: 1rem;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-.form-inline .form-control {
-    display: inline-block;
-    width: auto;
-    vertical-align: middle;
-}
-.form-row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -5px;
-    margin-left: -5px;
-}
-label {
-    margin-bottom: 0.5rem;
+    .form-group {
+        margin-bottom: 12px;
+        padding-right: 15px;
+        padding-left: 15px;
+        input{
+            font-size: 1.6rem;
+        }
+    }
+    .form-inline .form-control {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+    }
+    .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -5px;
+        margin-left: -5px;
+    }
+    label {
+        margin-bottom: 5px;
+    }
 }
 @media(max-width: $sm){
     .form-group {

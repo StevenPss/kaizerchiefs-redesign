@@ -11116,17 +11116,17 @@ textarea.form-control-lg {
 :root {
   /* 
   font-size: 10px;
-  where 16px = 1.6rem
+  where 10px = 1rem
   remember rem stands for 'relative to font-size of the root element' (which is identical to the selector 'html')
   */
-  font-size: 16px;
+  font-size: 10px;
 }
 
 body {
   font-family: "Raleway", sans-serif;
   background-color: #ffffff;
-  color: primary;
-  height: 100vh;
+  color: #252525;
+  height: 100%;
 }
 
 a {
@@ -11151,7 +11151,7 @@ a:hover {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(37, 37, 37, 0.6);
   z-index: -1;
 }
 .home-section .carousel-item .container {
@@ -11162,26 +11162,27 @@ a:hover {
   text-align: center;
 }
 .home-section .carousel-item .container .featured-article .featured-article__title {
-  font-size: 80px;
+  font-size: 7.2rem;
   color: #ffffff;
-  margin: 0 0 10px;
+  margin: 0 0 16px;
   opacity: 0;
 }
 .home-section .carousel-item .container .featured-article .featured-article__subtitle {
-  font-size: 30px;
+  font-size: 3rem;
   margin: 0;
   color: #eeeeee;
   opacity: 0;
 }
 .home-section .carousel-item .container .featured-article .featured-article__btn {
   border: 1px solid #faa61a;
-  border-radius: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
+  border-radius: 24px;
+  padding: 4px 24px;
+  font-size: 1.6rem;
   color: #ffffff;
 }
 .home-section .carousel-item .container .featured-article .featured-article__btn:hover {
   background-color: #faa61a;
+  text-decoration: none;
   transition: all ease-in-out 0.2s;
 }
 .home-section .carousel-item.active h2, .home-section .carousel-item.active .h2 {
@@ -11202,13 +11203,13 @@ a:hover {
   margin: 0;
 }
 .home-section .carousel-indicators li {
-  height: 60px;
-  width: 60px;
-  margin: 0 5px;
+  height: 48px;
+  width: 48px;
+  margin: 0 6px;
   border-radius: 50%;
   background-position: center;
   background-size: cover;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   transition: all 0.3s ease;
 }
 .home-section .carousel-indicators li.active {
@@ -11217,8 +11218,8 @@ a:hover {
 }
 .home-section .carousel-control-next,
 .home-section .carousel-control-prev {
-  height: 60px;
-  width: 60px;
+  height: 64px;
+  width: 64px;
   opacity: 1;
   z-index: 3;
   top: 50%;
@@ -11229,23 +11230,23 @@ a:hover {
 }
 .home-section .carousel-control-next:hover,
 .home-section .carousel-control-prev:hover {
-  box-shadow: 0 0 10px #ffffff;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 6px 24px 0px, rgba(255, 255, 255, 0.09) 0px 0px 0px 1px;
 }
 .home-section .carousel-control-next i,
 .home-section .carousel-control-prev i {
-  font-size: 30px;
+  font-size: 3.2rem;
 }
 .home-section .carousel-control-next {
-  right: -90px;
+  right: -88px;
 }
 .home-section .carousel-control-prev {
-  left: -90px;
+  left: -88px;
 }
 
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-32px);
   }
   100% {
     opacity: 1;
@@ -11255,7 +11256,7 @@ a:hover {
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(32px);
   }
   100% {
     opacity: 1;
@@ -11268,14 +11269,14 @@ a:hover {
     display: none;
   }
   .home-section .carousel-indicators li {
-    height: 60px;
-    width: 60px;
+    height: 64px;
+    width: 64px;
   }
   .home-section .carousel-item .container .featured-article .featured-article__title {
-    font-size: 45px;
+    font-size: 4rem;
   }
   .home-section .carousel-item .container .featured-article .featured-article__subtitle {
-    font-size: 22px;
+    font-size: 3.2rem;
   }
 }
 .secondary-nav, .header--sticky {
@@ -11345,6 +11346,9 @@ a:hover {
   transition: all 0.3s ease-in-out;
 }
 
+#main-nav {
+  font-size: 1.6rem;
+}
 #main-nav .main-menu li a {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
@@ -11352,8 +11356,10 @@ a:hover {
 }
 #main-nav .main-menu li a:hover {
   color: #faa61a;
+  text-decoration: none;
 }
 #main-nav .main-menu li .dropdown-menu {
+  font-size: 1.6rem;
   background-color: #ffffff;
   border: 1px solid #faa61a;
   border-radius: 0;
@@ -11363,6 +11369,7 @@ a:hover {
 }
 #main-nav .main-menu li .dropdown-menu li a:hover {
   background-color: #faa61a;
+  text-decoration: none;
 }
 #main-nav .main-menu li .dropdown:hover .dropdown-menu {
   display: block;
@@ -11371,18 +11378,7 @@ a:hover {
 #main-nav .bg-dark {
   background-color: #252525 !important;
 }
-#main-nav .form-control {
-  border-color: #a6adbb !important;
-}
-#main-nav .btn-outline-success {
-  border-color: #faa61a !important;
-  color: #ffffff;
-}
-#main-nav .btn-outline-success:hover {
-  background-color: #faa61a !important;
-}
 
-/* ============ desktop view ============ */
 @media all and (min-width: 992px) {
   .navbar .nav-item .dropdown-menu {
     display: none;
@@ -11398,7 +11394,7 @@ a:hover {
 }
 @media all and (max-width: 768px) {
   .navbar-brand img {
-    width: 54px;
+    width: 56px;
     height: auto;
     object-fit: contain;
   }
@@ -11414,231 +11410,14 @@ a:hover {
   width: 100%;
   border: none;
   border-radius: 0;
+  font-size: 1.6rem;
 }
 .covid-19-information a span {
   padding: 7px;
 }
 
-.fixtures {
-  padding: 30px 0;
-}
-.fixtures .fixtures__item .fixtures__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 20px;
-}
-.fixtures .fixtures__item .fixtures__header .fixtures__header-month {
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  text-transform: capitalize;
-}
-.fixtures .fixtures__item .fixtures__header .fixtures__header-note {
-  font-size: 0.82rem;
-  display: flex;
-  align-items: center;
-  margin: 0;
-}
-.fixtures .fixtures__item .fixtures__header .fixtures__header-note span i {
-  font-size: 1.2rem;
-  margin-right: 4px;
-}
-.fixtures .fixtures__item .fixtures__header .fixtures__header-note .fixtures__header-note-mobile {
-  display: none;
-}
-.fixtures .fixtures__item .fixtures-list {
-  padding: 0;
-  margin: 0;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list {
-  padding: 0.5rem 0 1.5rem;
-  list-style: none;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item {
-  transition: 0.1s;
-  position: relative;
-  width: 100%;
-  max-width: 134rem;
-  margin: 0 auto;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container-box-shadow {
-  border-radius: 3px;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
-  background: #fff;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container {
-  padding: 1rem 0;
-  border-bottom: 1px solid #ebebeb;
-  border-top: 1px solid #ebebeb;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition {
-  display: flex;
-  align-items: center;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-icon {
-  width: 8%;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-icon .match-item__competition-img {
-  margin: 0 auto;
-  padding-right: 2rem;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-icon .match-item__competition-img img {
-  max-width: 100%;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info {
-  display: flex;
-  flex: 1 0;
-  justify-content: space-between;
-  align-items: center;
-  border-left: 1px solid #ebebeb;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__date-location {
-  display: flex;
-  flex-direction: column;
-  padding: 0 0 0 2rem;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__date-location .match-item__date {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.8rem;
-  margin-bottom: 0.3rem;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__date-location .match-item__stadium {
-  color: #737373;
-  font-size: 0.75rem;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container {
-  display: flex;
-  flex: 1 0;
-  align-items: center;
-  padding: 0 1rem;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container {
-  display: flex;
-  align-items: center;
-  font-size: 0.95rem;
-  font-family: "Montserrat", sans-serif;
-  width: 50%;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container:first-child {
-  justify-content: flex-end;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container .match-item__team--home {
-  padding-right: 0.8rem;
-  text-align: right;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container .match-item__team--away {
-  padding-left: 0.8rem;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container .match-item__team-crest {
-  max-width: 36px;
-  max-height: 36px;
-  height: auto;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail {
-  margin: 0 1rem;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__kickoff {
-  display: inline-flex;
-  flex-wrap: wrap;
-  padding: 0.3rem 0;
-  width: 6rem;
-  font-size: 0.9rem;
-  justify-content: center;
-  background: linear-gradient(#f7f7f7, #f7f7f7 50%, #ebebeb 0);
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__kickoff .match-item__kickoff-label {
-  padding-right: 0.5rem;
-  font-family: "Montserrat", sans-serif;
-  white-space: nowrap;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__score {
-  display: inline-flex;
-  font-size: 1.2rem;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__score span {
-  width: 3rem;
-  height: 2rem;
-  line-height: 2rem;
-  text-align: center;
-  background: linear-gradient(#152638, #324150 50%, #061729 0);
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__score span:first-child {
-  border-right: 1px solid #061729;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__score--completed {
-  color: #ffffff;
-}
-.fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__score--completed span {
-  background: linear-gradient(#152638, #324150 50%, #061729 0);
-}
-
-@media screen and (max-width: 576px) {
-  .fixtures .fixtures__item .fixtures__header {
-    padding: 0 1rem;
-  }
-  .fixtures .fixtures__item .fixtures__header .fixtures__header-month {
-    font-size: 1.3rem;
-  }
-  .fixtures .fixtures__item .fixtures__header .fixtures__header-note span:first-child {
-    display: none;
-  }
-  .fixtures .fixtures__item .fixtures__header .fixtures__header-note .fixtures__header-note-mobile {
-    display: block;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition {
-    flex-direction: column;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-icon {
-    width: 14%;
-    padding-bottom: 0.6rem;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-icon .match-item__competition-img {
-    padding-right: 0;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info {
-    flex-direction: column;
-    border-left: none;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__date-location {
-    padding: 0;
-    align-items: center;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__date-location .match-item__date {
-    font-size: 0.75rem;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__date-location .match-item__stadium {
-    font-size: 0.75rem;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container {
-    font-size: 0.72rem;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container:first-child {
-    flex-direction: column-reverse;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container:last-child {
-    flex-direction: column;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container .match-item__team--home {
-    padding-right: 0;
-    text-align: center;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container .match-item__team--away {
-    padding-left: 0;
-    text-align: center;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__kickoff-container .match-item__team-container .match-item__team-crest {
-    margin-bottom: 0.75rem;
-  }
-  .fixtures .fixtures__item .fixtures-list .fixtures-list__list .match-item .match-item__container .match-item__competition .match-item__competition-info .match-item__match-detail .match-item__kickoff {
-    font-size: 0.8rem;
-  }
-}
 .standings-wrapper {
-  padding: 30px 0;
-}
-.standings-wrapper h2, .standings-wrapper .h2 {
-  font-family: "Montserrat", sans-serif;
-  padding-bottom: 20px;
+  padding: 32px 0;
 }
 .standings-wrapper .standings-bold {
   font-weight: bold !important;
@@ -11648,10 +11427,10 @@ a:hover {
   background-color: #faa61a;
 }
 .standings-wrapper .table {
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 .standings-wrapper .table td, .standings-wrapper .table th {
-  padding: 1rem;
+  padding: 20px;
   vertical-align: top;
   border: none;
 }
@@ -11684,7 +11463,7 @@ a:hover {
   align-items: center;
 }
 .standings-wrapper .team-standings .team-standings-crest {
-  flex: 0 0 25px;
+  flex: 0 0 24px;
   margin-right: 10px;
 }
 .standings-wrapper .team-standings .team-standings-crest img {
@@ -11695,16 +11474,10 @@ a:hover {
   text-transform: capitalize;
 }
 
-@media screen and (max-width: 576px) {
-  .standings-wrapper .table {
-    font-size: 0.8rem;
-  }
-}
 .merch {
   display: grid;
-  margin: 30px 0;
   width: 100%;
-  height: 400px;
+  height: 300px;
   font-family: "Montserrat", sans-serif;
   color: #ffffff;
   background: #faa61a;
@@ -11719,26 +11492,31 @@ a:hover {
   align-items: center;
 }
 .merch .merch__container .merch__promo {
-  max-width: 600px;
+  max-width: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10;
 }
 .merch .merch__container .merch__promo p {
-  font-size: 2.5rem;
+  font-size: 4rem;
+  line-height: 48px;
 }
 .merch .merch__container .merch__promo .btn {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 0.9rem;
-  padding: 10px 30px;
-}
-.merch .merch__container .merch__promo .btn:hover {
+  font-size: 1.4rem;
+  padding: 12px 32px;
   background-color: #252525;
   border-color: #252525;
   color: #ffffff;
+}
+.merch .merch__container .merch__promo .btn:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #252525;
+  text-decoration: none;
 }
 .merch .merch__container .merch__img {
   display: flex;
@@ -11768,31 +11546,195 @@ a:hover {
   .merch .merch__container {
     grid-template-columns: auto;
   }
+  .merch .merch__container .merch__promo p {
+    font-size: 2.4rem;
+  }
+  .merch .merch__container .merch__promo .btn {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+  }
   .merch .merch__container .merch__img img {
     object-position: initial;
   }
   .merch .merch__container .merch__img::before {
-    background: linear-gradient(to right, #faa61a 5%, transparent);
+    background: linear-gradient(to right, #faa61a 20%, transparent);
   }
 }
+@media screen and (max-width: 768px) {
+  .merch .merch__container .merch__promo p {
+    font-size: 3rem;
+  }
+  .merch .merch__container .merch__promo .btn {
+    font-size: 1.2rem;
+  }
+}
+.latest-addition {
+  padding: 40px 0;
+}
+.latest-addition h2, .latest-addition .h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.2rem;
+  margin-bottom: 24px;
+}
+.latest-addition .latest-addition__card .latest-addition__img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+.latest-addition .latest-addition__card .card-img-overlay {
+  background-color: transparent;
+  background-image: linear-gradient(rgba(19, 25, 40, 0) 0%, #252525 100%);
+}
+.latest-addition .latest-addition__card .card-img-overlay .card-icon span {
+  margin-left: 4px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.latest-addition .latest-addition__card .card-img-overlay .latest-addition__content .latest-addition__gallery {
+  font-size: 1.8rem;
+}
+.latest-addition .latest-addition__card .card-img-overlay .latest-addition__content .card-title {
+  font-size: 2.4rem;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 18px;
+}
+.latest-addition .latest-addition__card .card-img-overlay .latest-addition__content .latest-addition__tag {
+  background-color: #faa61a;
+  font-size: 1.2rem;
+  padding: 2px 0;
+  width: fit-content;
+  padding: 0 6px;
+  border-radius: 12px;
+}
+.latest-addition .latest-addition__card .card-img-overlay .latest-addition__content .latest-addition__tag .card-tag:first-child {
+  color: #252525;
+  font-weight: bold;
+}
+.latest-addition .latest-addition__card .card-img-overlay .latest-addition__content .latest-addition__tag .card-date:nth-child(2) {
+  margin-left: 4px;
+}
+.latest-addition .latest-addition__card .card-img-overlay .latest-addition__content .latest-addition__tag .card-date:nth-child(2):before {
+  content: " | ";
+}
+.latest-addition .latest-addition__card .card-body .card-title {
+  font-size: 2rem;
+}
+.latest-addition .latest-addition__card .card-body .card-text {
+  font-size: 1.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+  margin: 16px 0;
+}
+.latest-addition .latest-addition__card .card-footer {
+  background: transparent;
+  border: none;
+}
+.latest-addition .latest-addition__card .card-footer .latest-addition__tag {
+  background-color: #252525;
+  font-size: 1.2rem;
+  padding: 2px 0;
+  width: fit-content;
+  padding: 0 6px;
+  border-radius: 12px;
+}
+.latest-addition .latest-addition__card .card-footer .latest-addition__tag .card-tag:first-child {
+  color: #faa61a;
+  font-weight: bold;
+}
+.latest-addition .latest-addition__card .card-footer .latest-addition__tag .card-date:nth-child(2) {
+  color: #ffffff;
+  margin-left: 4px;
+}
+.latest-addition .latest-addition__card .card-footer .latest-addition__tag .card-date:nth-child(2):before {
+  content: " | ";
+}
+.latest-addition .latest-addition__discover-more {
+  display: flex;
+  padding: 32px 0 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.latest-addition .latest-addition__discover-more h3, .latest-addition .latest-addition__discover-more .h3 {
+  display: block;
+  font-size: 1.4rem;
+  color: #a6adbb;
+  margin-bottom: 16px;
+}
+.latest-addition .latest-addition__discover-more ul {
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.latest-addition .latest-addition__discover-more ul li {
+  list-style-type: none;
+}
+.latest-addition .latest-addition__discover-more ul li a {
+  display: block;
+  padding: 8px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .latest-addition .latest-addition__discover-more {
+    text-align: center;
+  }
+  .latest-addition .latest-addition__discover-more h3, .latest-addition .latest-addition__discover-more .h3 {
+    display: inline-block;
+    margin-right: 32px;
+  }
+  .latest-addition .latest-addition__discover-more ul {
+    display: inline-block;
+  }
+  .latest-addition .latest-addition__discover-more ul li {
+    display: inline-block;
+    border-right: 1px solid #faa61a;
+  }
+  .latest-addition .latest-addition__discover-more ul li:last-child {
+    border-right: none;
+  }
+  .latest-addition .latest-addition__discover-more ul li a {
+    padding: 0 12px;
+    line-height: 1;
+  }
+}
+@media screen and (max-width: 576px) {
+  .latest-addition .latest-addition__discover-more ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .latest-addition .latest-addition__discover-more ul li {
+    width: 48%;
+    border-bottom: 1px solid #faa61a;
+  }
+}
+.latest-addition--dark {
+  background-color: #252525;
+}
+
 .newsletter {
-  margin: 30px 0;
+  padding: 40px 0;
 }
 .newsletter .newsletter__header {
   text-transform: capitalize;
 }
 .newsletter .newsletter__header .newsletter__title {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.8rem;
-  margin-bottom: 0.5em;
+  font-size: 3.2rem;
+  margin-bottom: 16px;
 }
 .newsletter .newsletter__header .newsletter__subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 1em;
+  font-size: 2.4rem;
+  margin-bottom: 24px;
 }
 .newsletter .form-text-field {
-  height: 3.4em;
-  margin-bottom: 1.4em;
+  height: 48px;
+  margin-bottom: 32px;
   border-radius: 0;
   outline: none;
 }
@@ -11801,21 +11743,24 @@ a:hover {
   box-shadow: none;
   outline: none;
 }
+.newsletter .form-check {
+  font-size: 1.6rem;
+}
 .newsletter .form-check-input:checked {
   background-color: #faa61a;
   border-color: #faa61a;
-  box-shadow: 0 0 0 0.2rem rgba(250, 166, 26, 0.25);
+  box-shadow: 0 0 0 4px rgba(250, 166, 26, 0.25);
 }
 .newsletter .form-check-input:focus:not(:checked) {
   border-color: #faa61a;
-  box-shadow: 0 0 0 0.2rem rgba(250, 166, 26, 0.25) !important;
+  box-shadow: 0 0 0 4px rgba(250, 166, 26, 0.25) !important;
 }
 .newsletter .btn-primary {
   text-transform: uppercase;
-  padding: 1.11em 2.78em;
-  margin-top: 1.39em;
+  padding: 16px 40px;
+  margin-top: 12px;
   border-radius: 0;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   margin-left: 15px;
   font-family: "Montserrat", sans-serif;
 }
@@ -11823,28 +11768,27 @@ a:hover {
   background-color: #faa61a;
   border-color: #faa61a;
 }
-
-.form-group {
-  margin-bottom: 1rem;
+.newsletter .form-group {
+  margin-bottom: 12px;
   padding-right: 15px;
   padding-left: 15px;
 }
-
-.form-inline .form-control {
+.newsletter .form-group input {
+  font-size: 1.6rem;
+}
+.newsletter .form-inline .form-control {
   display: inline-block;
   width: auto;
   vertical-align: middle;
 }
-
-.form-row {
+.newsletter .form-row {
   display: flex;
   flex-wrap: wrap;
   margin-right: -5px;
   margin-left: -5px;
 }
-
-label {
-  margin-bottom: 0.5rem;
+.newsletter label {
+  margin-bottom: 5px;
 }
 
 @media (max-width: 576px) {
@@ -11855,35 +11799,33 @@ label {
 #footer {
   background-color: #252525;
   color: #ffffff;
-  font-size: 12px;
-  padding: 30px 0;
+  font-size: 1.2rem;
+  padding: 32px 0;
 }
 #footer .footer__sponsors {
-  padding: 20px 0;
+  padding: 24px 0;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
-#footer .footer__sponsors ul {
-  margin: 0;
-  padding: 0;
+#footer .footer__sponsors .footer__sponsors-list {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
-#footer .footer__sponsors ul li {
+#footer .footer__sponsors .footer__sponsors-list li {
   list-style-type: none;
-  padding: 0;
+  padding: 6px 0;
   margin: 0;
 }
-#footer .footer__sponsors ul li a {
+#footer .footer__sponsors .footer__sponsors-list li a {
   display: block;
   text-align: center;
-  padding: 0 10px;
+  padding: 0 12px;
 }
-#footer .footer__sponsors ul li a img {
-  height: 25px;
+#footer .footer__sponsors .footer__sponsors-list li a img {
+  height: 48px;
 }
 #footer .footer__sitemap {
   border-top: 2px solid #faa61a;
@@ -11891,7 +11833,7 @@ label {
 }
 #footer .footer__sitemap h6, #footer .footer__sitemap .h6 {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 1.4rem;
   text-transform: uppercase;
 }
 #footer .footer__sitemap ul {
@@ -11899,7 +11841,7 @@ label {
 }
 #footer .footer__sitemap ul li {
   list-style: none;
-  padding: 5px 0;
+  padding: 6px 0;
 }
 #footer .footer__sitemap ul li a {
   color: #a6adbb;
@@ -11909,22 +11851,52 @@ label {
 }
 #footer .footer__sitemap .footer__social-icons li {
   display: inline;
-  font-size: 16px;
-  padding-left: 5px;
-  padding-right: 10px;
+  font-size: 1.6rem;
+  padding-left: 0;
+  padding-right: 16px;
+}
+#footer .footer__sitemap .footer__img--filter {
+  filter: grayscale(1) contrast(0.9) opacity(0.9);
 }
 #footer .footer__copyright {
   color: #a6adbb;
 }
 
+@media (max-width: 576px) {
+  #footer .footer__sponsors {
+    padding: 24px 0;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #footer .footer__sponsors .footer__sponsors-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 32px 0;
+    padding: 0;
+    margin: 0;
+  }
+  #footer .footer__sponsors .footer__sponsors-list li {
+    list-style-type: none;
+  }
+  #footer .footer__sponsors .footer__sponsors-list li a {
+    display: block;
+    text-align: center;
+    padding: 0 12px;
+  }
+  #footer .footer__sponsors .footer__sponsors-list li a img {
+    height: 40px;
+  }
+}
 @media (min-width: 768px) {
-  #footer .footer__sponsors ul {
+  #footer .footer__sponsors .footer__sponsors-list {
     min-height: 100px;
   }
-  #footer .footer__sponsors ul li a {
+  #footer .footer__sponsors .footer__sponsors-list li a {
     padding: 10px 30px;
   }
-  #footer .footer__sponsors ul li a img {
+  #footer .footer__sponsors .footer__sponsors-list li a img {
     height: 50px;
   }
 }

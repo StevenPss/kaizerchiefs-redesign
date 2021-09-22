@@ -1,30 +1,28 @@
 #footer{
     background-color: $primary;
     color: $secondary;
-    font-size: 12px;
-    padding: 30px 0;
+    font-size: 1.2rem;
+    padding: 32px 0;
     .footer__sponsors{
-        padding: 20px 0;
+        padding: 24px 0;
         max-width: 900px;
         margin-left: auto;
         margin-right: auto;
-        ul{
-            margin: 0;
-            padding: 0;
+        .footer__sponsors-list{
             display: flex;
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
             li{
                 list-style-type: none;
-                padding: 0;
+                padding: 6px 0;
                 margin: 0;
                 a{
                     display: block;
                     text-align: center;
-                    padding: 0 10px;
+                    padding: 0 12px;
                     img{
-                        height: 25px;
+                        height: 48px;
                     }
                 }
             }
@@ -35,14 +33,14 @@
         padding: 40px 0;
         h6{
             font-family: $heading_font;
-            font-size: 14px;
+            font-size: 1.4rem;
             text-transform: uppercase;
         }
         ul{
             padding: 0;
             li{
                 list-style: none;
-                padding: 5px 0;
+                padding: 6px 0;
                 a{
                     color: $secondary-500;
                     &:hover{
@@ -54,10 +52,13 @@
         .footer__social-icons{
             li{
                 display:inline;
-                font-size: 16px;
-                padding-left: 5px;
-                padding-right: 10px;
+                font-size: 1.6rem;
+                padding-left: 0;
+                padding-right: 16px;
             }
+        }
+        .footer__img--filter{
+            filter: grayscale(1) contrast(0.9) opacity(0.9);
         }
     }
     .footer__copyright{
@@ -65,10 +66,40 @@
     }
 }
 
+@media(max-width: $sm){
+    #footer{
+        .footer__sponsors{
+            padding: 24px 0;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            .footer__sponsors-list{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: auto; 
+                gap: 32px 0;
+                padding: 0;
+                margin: 0;
+                li{
+                    list-style-type: none;
+                    a{
+                        display: block;
+                        text-align: center;
+                        padding: 0 12px;
+                        img{
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media(min-width: $md){
     #footer{
         .footer__sponsors{
-            ul{
+            .footer__sponsors-list{
                 min-height: 100px;
                 li{
                     a{
