@@ -11126,7 +11126,7 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: #ffffff;
   color: #252525;
-  height: 100vh;
+  height: 100%;
 }
 
 a {
@@ -11564,13 +11564,27 @@ a:hover {
   font-size: 3.2rem;
   margin-bottom: 24px;
 }
+.latest-addition .latest-addition__card .latest-addition__img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
 .latest-addition .latest-addition__card .card-img-overlay {
   background-color: transparent;
   background-image: linear-gradient(rgba(19, 25, 40, 0) 0%, #252525 100%);
 }
+.latest-addition .latest-addition__card .card-img-overlay .card-icon span {
+  margin-left: 4px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.latest-addition .latest-addition__card .card-img-overlay .latest-addition__content .latest-addition__gallery {
+  font-size: 1.8rem;
+}
 .latest-addition .latest-addition__card .card-img-overlay .latest-addition__content .card-title {
   font-size: 2.4rem;
   font-family: "Montserrat", sans-serif;
+  margin-bottom: 18px;
 }
 .latest-addition .latest-addition__card .card-img-overlay .latest-addition__content .latest-addition__tag {
   background-color: #faa61a;
@@ -11582,6 +11596,7 @@ a:hover {
 }
 .latest-addition .latest-addition__card .card-img-overlay .latest-addition__content .latest-addition__tag .card-tag:first-child {
   color: #252525;
+  font-weight: bold;
 }
 .latest-addition .latest-addition__card .card-img-overlay .latest-addition__content .latest-addition__tag .card-date:nth-child(2) {
   margin-left: 4px;
@@ -11600,6 +11615,7 @@ a:hover {
   -webkit-line-clamp: 2;
   /* number of lines to show */
   -webkit-box-orient: vertical;
+  margin: 16px 0;
 }
 .latest-addition .latest-addition__card .card-footer {
   background: transparent;
@@ -11615,6 +11631,7 @@ a:hover {
 }
 .latest-addition .latest-addition__card .card-footer .latest-addition__tag .card-tag:first-child {
   color: #faa61a;
+  font-weight: bold;
 }
 .latest-addition .latest-addition__card .card-footer .latest-addition__tag .card-date:nth-child(2) {
   color: #ffffff;
@@ -11625,7 +11642,7 @@ a:hover {
 }
 .latest-addition .latest-addition__discover-more {
   display: flex;
-  padding: 32px 0;
+  padding: 32px 0 0;
   text-transform: uppercase;
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -11637,6 +11654,8 @@ a:hover {
   margin-bottom: 16px;
 }
 .latest-addition .latest-addition__discover-more ul {
+  padding: 0;
+  margin: 0;
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -11682,6 +11701,10 @@ a:hover {
     border-bottom: 1px solid #faa61a;
   }
 }
+.latest-addition--dark {
+  background-color: #252525;
+}
+
 .newsletter {
   padding: 40px 0;
 }
