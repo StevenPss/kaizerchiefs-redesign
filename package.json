@@ -2,26 +2,25 @@
   "name": "kaizerchiefs-redesign",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "clean": "rimraf dist",
+    "start": "npm run clean && parcel serve ./src/index.html",
+    "build": "npm run clean && parcel build ./src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Steven Selolo",
   "license": "ISC",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "parcel-bundler": "^1.12.5",
-    "sass": "^1.40.1"
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "parcel": "^2.0.0-rc.0",
+    "posthtml-include": "^1.7.1"
   },
   "dependencies": {
     "@popperjs/core": "^2.10.1",
     "bootstrap": "^5.1.1",
-    "datatables.net": "^1.11.2",
-    "datatables.net-bs": "^1.11.2",
-    "datatables.net-responsive": "^2.2.9",
-    "gsap": "^3.7.1",
-    "jquery": "^3.6.0"
+    "gsap": "^3.7.1"
   }
 }

@@ -1,0 +1,79 @@
+
+.newsletter{
+    padding: 40px 0;
+    .newsletter__header{
+        text-transform: capitalize;
+        .newsletter__title{
+            font-family: $heading_font;
+            font-size: 3.2rem;
+            margin-bottom: 16px;
+        }
+        .newsletter__subtitle{
+            font-size: 2.4rem;
+            margin-bottom: 24px;
+        }
+    }
+    .form-text-field{
+        height: 48px;
+        margin-bottom: 32px;
+        border-radius: 0;
+        outline: none;
+        &:focus{
+            border-color: $accent;
+            box-shadow: none;
+            outline: none;
+        }
+    }
+    .form-check{
+        font-size: 1.6rem;
+    }
+    .form-check-input:checked {
+        background-color: $accent;
+        border-color: $accent;
+        box-shadow: 0 0 0 4px rgba($accent, 0.25);
+    }
+    .form-check-input:focus:not(:checked) {
+        border-color: $accent;
+        box-shadow: 0 0 0 4px rgba($accent, 0.25) !important;
+    }
+    .btn-primary{
+        text-transform: uppercase;
+        padding: 16px 40px;
+        margin-top: 12px;
+        border-radius: 0;
+        font-size: 1.2rem;
+        margin-left: 15px;
+        font-family: $heading_font;
+        &:hover{
+            background-color: $accent;
+            border-color: $accent;
+        }
+    }
+    .form-group {
+        margin-bottom: 12px;
+        padding-right: 15px;
+        padding-left: 15px;
+        input{
+            font-size: 1.6rem;
+        }
+    }
+    .form-inline .form-control {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+    }
+    .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -5px;
+        margin-left: -5px;
+    }
+    label {
+        margin-bottom: 5px;
+    }
+}
+@media(max-width: $sm){
+    .form-group {
+        width: 100%;
+    }
+}

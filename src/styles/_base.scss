@@ -1,0 +1,32 @@
+:root {
+    /* 
+    font-size: 10px;
+    where 10px = 1rem
+    remember rem stands for 'relative to font-size of the root element' (which is identical to the selector 'html')
+    */
+    font-size: 10px;
+}
+
+body{
+    font-family: $body_font;
+    background-color: $secondary;
+    color: $primary;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+        // color: $accent;
+    }
+}
+
+.psuedo-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}

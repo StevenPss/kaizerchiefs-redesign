@@ -5,182 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaizer Chiefs Web Redesign</title>
-    <link rel="stylesheet" href="scss/theme.scss">
-    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.2/css/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap5.min.css">
+    <link rel="stylesheet" href="./styles.scss">
+
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway&display=swap" 
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.2/css/dataTables.bootstrap5.min.css" crossorigin>
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap5.min.css" crossorigin>
 </head>
 <body>
-    <!-- ******************* The Navbar Area ******************* -->
-    <header id="wrapper-navbar" class="header js-header">
-        <!-- Secondary navbar -->
-        <!-- <aside class="secondary-nav text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="secondary-nav__container">
-                            <ul class="secondary-nav__links fw-bold text-uppercase">
-                                <li class="secondary-nav__link">
-                                    <a href="https://www.kcdigistore.com/" target="_blank">Shop <i class="fas fa-external-link-alt"></i></a>
-                                </li>
-                            </ul>
-                            
-                            <ul class="secondary-nav__social-icons">
-                                <li class="secondary-nav__social-icon">
-                                    <a href="https://www.instagram.com/kcfcofficial/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                                </li>
-                                <li class="secondary-nav__social-icon">
-                                    <a href="https://www.facebook.com/kaizerchiefs/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                                </li>
-                                <li class="secondary-nav__social-icon">
-                                    <a href="https://twitter.com/kaizerchiefs"	target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-                                </li>
-                                <li class="secondary-nav__social-icon">
-                                    <a href="https://www.youtube.com/c/KaizerChiefsFootballClub" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </aside> -->
-        <!-- end of Secondary navbar -->
 
-        <!-- main navbar -->
-        <nav id="main-nav" class="js-main-nav navbar fixed-top navbar-expand-xl navbar-dark">
-            <div class="container">
-              <a class="navbar-brand" href="#">
-                <img src="assets/logo.png" alt="Kaizer Chiefs Logo" width="67" height="67">
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="main-menu navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">News</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Matches
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Fixtures</a></li>
-                      <li><a class="dropdown-item" href="#">Results</a></li>
-                      <li><a class="dropdown-item" href="#">League Tables</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Teams</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Fans</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Club</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">KCTV</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Media</a>
-                  </li>
-                </ul>
-                <ul class="main-menu navbar-nav ms-auto mb-2 mb-lg-0">
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="https://www.kcdigistore.com/" target="_blank">Shop <i class="fas fa-external-link-alt"></i></a>
-                    </li>
-                  </ul>
-                </ul>
-              </div>
-            </div>
-        </nav>
-        <!-- end of main navbar -->
-    </header>
-    <!-- ******************* End of The Navbar Area ******************* -->
+    <include src="partials/nav.html"></include>
+    <include src="partials/alert.html"></include>
+    <include src="partials/carousel.html"></include>
 
-    <!-- ******************* Covid 19 Notification ******************* --> 
-    <aside class="covid-19-information text-center alert alert-dismissible fade show" role="alert">
+    <!-- ******************* Fixtures Area ******************* -->   
+    <article class="fixtures pb-1">
+      <div class="container">
         <div class="row">
-          <div class="col-lg-12">
-            <span class="fw-bold">Stay Informed! </span><span>Visit the SA Department of Health's Website for COVID-19 updates:</span>
-            <a href="http://sacoronavirus.co.za" target="_blank">
-              <span class="fw-bold badge bg-dark">sacoronavirus.co.za</span>
-            </a>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-        </div>
-      </aside>
-      <!-- ******************* end of Covid 19 Notification ******************* --> 
-    
-    <!-- ******************* Carousel Area ******************* -->    
-    <section class="home-section">
-      <div id="carousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-controls">
-            <ol class="carousel-indicators">
-              <li data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-image:url('./assets/img/slide-1.jpg');"></li>
-              <li data-bs-target="#carousel" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2" style="background-image:url('./assets/img/slide-2.jpg');"></li>
-              <li data-bs-target="#carousel" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3" style="background-image:url('./assets/img/slide-3.jpg');"></li>
-            </ol>
-            <a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev">
-              <i class="fas fa-angle-left" aria-hidden="true"></i>
-            </a>
-            <a class="carousel-control-next" href="#carousel" role="button" data-bs-slide="next">
-              <i class="fas fa-angle-right" aria-hidden="true"></i>
-            </a>
-          </div>
-        <div class="carousel-inner">
-
-          <div class="carousel-item active" style="background-image:url('./assets/img/slide-1.jpg');">
-            <div class="container">
-              <div class="featured-article">
-                <h2 class="featured-article__title">Chiefs 1 begin quest for 16th MTN8 trophy</h2>
-                <a href="#" class="btn featured-article__btn">Find Out More</a>
+          <!-- latest results -->
+            <div class="col-lg-6">
+                <div class="fixtures__item">
+                  <header class="fixtures__header">
+                    <h6 class="fixtures__header-month">Latest Results</h6>
+                    <p class="fixtures__header-note"><span><a href="#"><i class="far fa-arrow-alt-circle-right" aria-hidden="true"></i> View All Results</a></span></p>
+                  </header>
+                  <div class="fixtures-list">
+                    <ol class="fixtures-list__list">
+                      <li class="match-item">
+                        <div class="match-item__container match-item__container-box-shadow">
+                          <div class="match-item__competition flex-column">
+                            <div class="match-item__competition-icon">
+                              <div class="match-item__competition-img pe-0 pb-3">
+                                <img src="url:./assets/img/competitions/dstv-premiership.png" alt="DSTV Premiership">
+                              </div>
+                            </div>
+                            <div class="match-item__competition-info flex-column border-0">
+                              <div class="match-item__date-location ps-0 text-center">
+                                <span class="match-item__date">Saturday 2 April</span>
+                                <span class="match-item__stadium">FNB Stadium</span>
+                              </div>
+                              <div class="match-item__kickoff-container">
+                                <div class="match-item__team-container">
+                                  <span class="match-item__team match-item__team--home">Kaizer Chiefs</span>
+                                  <img class="match-item__team-crest" src="url:./assets/logo.png" alt="Home team crest">
+                                </div>
+                                <div class="match-item__match-detail">
+                                  <div class="match-item__score match-item__score--completed">
+                                    <span>2</span>
+                                    <span>1</span>
+                                  </div>
+                                  <!-- <time class="match-item__kickoff">
+                                    <span class="match-item__kickoff-label">KO </span>16:00
+                                  </time> -->
+                                </div>
+                                <div class="match-item__team-container">
+                                  <img class="match-item__team-crest" src="url:./assets/logo.png" alt="Away team crest">
+                                  <span class="match-item__team match-item__team--away">Tshakhuma Tsha Madzivhandila</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
               </div>
-            </div>
-          </div>
+            </div><!-- end of latest results -->
 
-          <div class="carousel-item" style="background-image:url('./assets/img/slide-2.jpg');">
-            <div class="container">
-              <div class="featured-article">
-                <h2 class="featured-article__title">Chiefs 2 begin quest for 16th MTN8 trophy</h2>
-                <a href="#" class="btn featured-article__btn">Find Out More</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item" style="background-image:url('./assets/img/slide-3.jpg');">
-            <div class="container">
-              <div class="featured-article">
-                <h2 class="featured-article__title">Chiefs 3 begin quest for 16th MTN8 trophy</h2>
-                <a href="#" class="btn featured-article__btn">Find Out More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ******************* end of Carousel Area ******************* -->
-
-
-
-
-
-   <!-- ******************* Fixtures Area ******************* -->   
-   <article class="fixtures pb-1">
-    <div class="container">
-       <div class="row">
-         <!-- latest results -->
-          <div class="col-lg-6">
+            <!-- upcoming fixtures -->
+            <div class="col-lg-6">
               <div class="fixtures__item">
                 <header class="fixtures__header">
-                  <h6 class="fixtures__header-month">Latest Results</h6>
-                  <p class="fixtures__header-note"><span><a href="#"><i class="far fa-arrow-alt-circle-right" aria-hidden="true"></i> View All Results</a></span></p>
+                  <h6 class="fixtures__header-month">Upcoming Fixtures</h6>
+                  <p class="fixtures__header-note"><span><a href="#"><i class="far fa-arrow-alt-circle-right" aria-hidden="true"></i> View All Fixtures</a></span></p>
                 </header>
                 <div class="fixtures-list">
                   <ol class="fixtures-list__list">
@@ -189,7 +91,7 @@
                         <div class="match-item__competition flex-column">
                           <div class="match-item__competition-icon">
                             <div class="match-item__competition-img pe-0 pb-3">
-                              <img src="./assets/img/competitions/dstv-premiership.png" alt="DSTV Premiership">
+                              <img src="url:./assets/img/competitions/dstv-premiership.png" alt="DSTV Premiership">
                             </div>
                           </div>
                           <div class="match-item__competition-info flex-column border-0">
@@ -199,21 +101,17 @@
                             </div>
                             <div class="match-item__kickoff-container">
                               <div class="match-item__team-container">
-                                <span class="match-item__team match-item__team--home">Kaizer Chiefs</span>
-                                <img class="match-item__team-crest" src="./assets/logo.png" alt="Home team crest">
+                                <span class="match-item__team match-item__team--home">Orlando Pirates</span>
+                                <img class="match-item__team-crest" src="url:./assets/logo.png" alt="Home team crest">
                               </div>
                               <div class="match-item__match-detail">
-                                <div class="match-item__score match-item__score--completed">
-                                  <span>2</span>
-                                  <span>1</span>
-                                </div>
-                                <!-- <time class="match-item__kickoff">
-                                  <span class="match-item__kickoff-label">KO </span>16:00
-                                </time> -->
+                                <time class="match-item__kickoff">
+                                  <span class="match-item__kickoff-label">KO </span>15:00
+                                </time>
                               </div>
                               <div class="match-item__team-container">
-                                <img class="match-item__team-crest" src="./assets/logo.png" alt="Away team crest">
-                                <span class="match-item__team match-item__team--away">Tshakhuma Tsha Madzivhandila</span>
+                                <img class="match-item__team-crest" src="url:./assets/logo.png" alt="Away team crest">
+                                <span class="match-item__team match-item__team--away">Kaizer Chiefs</span>
                               </div>
                             </div>
                           </div>
@@ -222,63 +120,13 @@
                     </li>
                   </ol>
                 </div>
-            </div>
-          </div><!-- end of latest results -->
-
-          <!-- upcoming fixtures -->
-          <div class="col-lg-6">
-            <div class="fixtures__item">
-              <header class="fixtures__header">
-                <h6 class="fixtures__header-month">Upcoming Fixtures</h6>
-                <p class="fixtures__header-note"><span><a href="#"><i class="far fa-arrow-alt-circle-right" aria-hidden="true"></i> View All Fixtures</a></span></p>
-              </header>
-              <div class="fixtures-list">
-                <ol class="fixtures-list__list">
-                  <li class="match-item">
-                    <div class="match-item__container match-item__container-box-shadow">
-                      <div class="match-item__competition flex-column">
-                        <div class="match-item__competition-icon">
-                          <div class="match-item__competition-img pe-0 pb-3">
-                            <img src="./assets/img/competitions/dstv-premiership.png" alt="DSTV Premiership">
-                          </div>
-                        </div>
-                        <div class="match-item__competition-info flex-column border-0">
-                          <div class="match-item__date-location ps-0 text-center">
-                            <span class="match-item__date">Saturday 2 April</span>
-                            <span class="match-item__stadium">FNB Stadium</span>
-                          </div>
-                          <div class="match-item__kickoff-container">
-                            <div class="match-item__team-container">
-                              <span class="match-item__team match-item__team--home">Orlando Pirates</span>
-                              <img class="match-item__team-crest" src="./assets/logo.png" alt="Home team crest">
-                            </div>
-                            <div class="match-item__match-detail">
-                              <time class="match-item__kickoff">
-                                <span class="match-item__kickoff-label">KO </span>15:00
-                              </time>
-                            </div>
-                            <div class="match-item__team-container">
-                              <img class="match-item__team-crest" src="./assets/logo.png" alt="Away team crest">
-                              <span class="match-item__team match-item__team--away">Kaizer Chiefs</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ol>
               </div>
-            </div>
-          </div><!-- end of upcoming fixtures -->
-            
-       </div>
-    </div>
-  </article>
+            </div><!-- end of upcoming fixtures -->
+              
+        </div>
+      </div>
+    </article>
     <!-- ******************* end of Fixtures Area ******************* -->
-
-
-
-
 
     <!-- ******************* Merchandise Area ******************* -->
     <div class="merch">
@@ -290,7 +138,7 @@
           </div>
         </div>
         <div class="merch__img">
-          <img src="./assets/img/merch/Kaizer-Chiefs-WIN-600x338-1.png" alt="">
+          <img src="url:./assets/img/merch/Kaizer-Chiefs-WIN-600x338-1.png" alt="">
         </div>
       </div>
     </div>
@@ -320,7 +168,7 @@
                           <td>7</td>
                           <td class="team-standings">
                               <div class="team-standings-crest">
-                                  <img src="./assets/logo.png" alt="Golden Arrows">
+                                  <img src="url:./assets/logo.png" alt="Golden Arrows">
                               </div>
                               <p class="team-standings-name">Golden Arrows</p>
                           </td>
@@ -337,7 +185,7 @@
                           <td>8</td>
                           <td class="team-standings">
                               <div class="team-standings-crest">
-                                  <img src="./assets/logo.png" alt="Kaizer Chiefs">
+                                  <img src="url:./assets/logo.png" alt="Kaizer Chiefs">
                               </div>
                               <p class="team-standings-name">Kaizer Chiefs</p>
                           </td>
@@ -354,7 +202,7 @@
                           <td>9</td>
                           <td class="team-standings">
                               <div class="team-standings-crest">
-                                  <img src="./assets/logo.png" alt="Maritzburg Utd">
+                                  <img src="url:./assets/logo.png" alt="Maritzburg Utd">
                               </div>
                               <p class="team-standings-name">Maritzburg Utd</p>
                           </td>
@@ -386,12 +234,11 @@
           </div>
         </div>
         <div class="merch__img">
-          <img src="./assets/img/merch/TOB7984-797x450.jpg" alt="">
+          <img src="url:./assets/img/merch/TOB7984-797x450.jpg" alt="">
         </div>
       </div>
     </div>
     <!-- ******************* end of Merchandise Area ******************* -->
-
 
     <!-- ******************* Latest News ******************* -->
     <div class="latest-addition">
@@ -402,7 +249,7 @@
             <div class="col-lg-6 mb-4">
               <div class="card text-white latest-addition__card h-100">
                 <a class="psuedo-link" href="#"></a>
-                <img src="./assets/img/merch/TOB0055-797x450.jpg" class="card-img latest-addition__img" alt="...">
+                <img src="url:./assets/img/merch/TOB0055-797x450.jpg" class="card-img latest-addition__img" alt="...">
                 <div class="card-img-overlay d-flex flex-column justify-content-between">
                   <div class="card-icon"><i class="far fa-newspaper fa-2x"></i></div>
                   <div class="latest-addition__content">
@@ -418,7 +265,7 @@
             <div class="col-lg-3 col-md-6 mb-4">
               <div class="card latest-addition__card h-100">
                 <a class="psuedo-link" href="#"></a>
-                <img src="./assets/img/merch/TOB7984-797x450.jpg" class="card-img-top" alt="...">
+                <img src="url:./assets/img/merch/TOB7984-797x450.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Mixed fortunes for Chiefs youth teams</h5>
                   <p class="card-text">Kaizer Chiefs had five teams in action on Saturday with four age-group teams taking on their counterparts from Jomo Cosmos in the Gauteng Development League at the Rand Stadium in Johannesburg.</p>
@@ -434,7 +281,7 @@
             <div class="col-lg-3 col-md-6 mb-4">
               <div class="card latest-addition__card h-100">
                 <a class="psuedo-link" href="#"></a>
-                <img src="./assets/img/merch/TOB7984-797x450.jpg" class="card-img-top" alt="...">
+                <img src="url:./assets/img/merch/TOB7984-797x450.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Chiefs go down to Royal AM</h5>
                   <p class="card-text">Kaizer Chiefs were defeated 4-1 at home by Royal AM in a DStv Premiership clash at the FNB Stadium on Saturday evening.</p>
@@ -450,7 +297,7 @@
             <div class="col-lg-3 col-md-6 mb-4">
               <div class="card latest-addition__card h-100">
                 <a class="psuedo-link" href="#"></a>
-                <img src="./assets/img/merch/TOB7984-797x450.jpg" class="card-img-top" alt="...">
+                <img src="url:./assets/img/merch/TOB7984-797x450.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Njabulo Ngcobo, Petersen debut for Chiefs</h5>
                   <p class="card-text">Kaizer Chiefs goalkeeper Brandon Petersen and defender Njabulo Ngcobo will make their debut for Amakhosi this evening when they come up against newcomers to the PSL, Royal AM in a DStv Premiership match at FNB Stadium.</p>
@@ -466,7 +313,7 @@
             <div class="col-lg-3 col-md-6 mb-4">
               <div class="card latest-addition__card h-100">
                 <a class="psuedo-link" href="#"></a>
-                <img src="./assets/img/merch/TOB7984-797x450.jpg" class="card-img-top" alt="...">
+                <img src="url:./assets/img/merch/TOB7984-797x450.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Many positives for Chiefs – Billiat</h5>
                   <p class="card-text">Kaizer Chiefs attacking midfielder Khama Billiat is upbeat ahead of Chiefs’ DStv Premiership clash this coming Saturday against Premier Soccer League newcomers Royal AM.</p>
@@ -482,7 +329,7 @@
             <div class="col-lg-3 col-md-6 mb-4">
               <div class="card latest-addition__card h-100">
                 <a class="psuedo-link" href="#"></a>
-                <img src="./assets/img/merch/TOB7984-797x450.jpg" class="card-img-top" alt="...">
+                <img src="url:./assets/img/merch/TOB7984-797x450.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Double century beckons for Chiefs and Baxter</h5>
                   <p class="card-text">Amakhosi coach Stuart Baxter will lead Kaizer Chiefs into a match for the 132nd time in all competitions, when they host Royal AM in a DStv Premiership game at the FNB Stadium on Saturday evening.</p>
@@ -498,7 +345,7 @@
             <div class="col-lg-3 col-md-6 mb-4">
               <div class="card latest-addition__card h-100">
                 <a class="psuedo-link" href="#"></a>
-                <img src="./assets/img/merch/TOB7984-797x450.jpg" class="card-img-top" alt="...">
+                <img src="url:./assets/img/merch/TOB7984-797x450.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Double century beckons for Chiefs and Baxter</h5>
                   <p class="card-text">Amakhosi coach Stuart Baxter will lead Kaizer Chiefs into a match for the 132nd time in all competitions, when they host Royal AM in a DStv Premiership game at the FNB Stadium on Saturday evening.</p>
@@ -537,7 +384,7 @@
             <div class="col-lg-6 mb-4">
               <div class="card text-white latest-addition__card">
                 <a class="psuedo-link" href="#"></a>
-                <img src="./assets/img/merch/TOB0055-797x450.jpg" class="card-img latest-addition__img" alt="...">
+                <img src="url:./assets/img/merch/TOB0055-797x450.jpg" class="card-img latest-addition__img" alt="...">
                 <div class="card-img-overlay d-flex flex-column justify-content-between">
                   <div class="card-icon"><i class="fab fa-youtube fa-2x"></i></div>
                   <div class="latest-addition__content">
@@ -553,7 +400,7 @@
             <div class="col-lg-6 mb-4">
               <div class="card text-white latest-addition__card">
                 <a class="psuedo-link" href="#"></a>
-                <img src="./assets/img/merch/TOB0055-797x450.jpg" class="card-img latest-addition__img" alt="...">
+                <img src="url:./assets/img/merch/TOB0055-797x450.jpg" class="card-img latest-addition__img" alt="...">
                 <div class="card-img-overlay d-flex flex-column justify-content-between">
                   <div class="card-icon"><i class="fab fa-youtube fa-2x"></i></div>
                   <div class="latest-addition__content">
@@ -569,7 +416,7 @@
             <div class="col-lg-6 mb-4">
               <div class="card text-white latest-addition__card">
                 <a class="psuedo-link" href="#"></a>
-                <img src="./assets/img/merch/TOB0055-797x450.jpg" class="card-img latest-addition__img" alt="...">
+                <img src="url:./assets/img/merch/TOB0055-797x450.jpg" class="card-img latest-addition__img" alt="...">
                 <div class="card-img-overlay d-flex flex-column justify-content-between">
                   <div class="card-icon"><i class="fab fa-youtube fa-2x"></i></div>
                   <div class="latest-addition__content">
@@ -585,7 +432,7 @@
             <div class="col-lg-6 mb-4">
               <div class="card text-white latest-addition__card">
                 <a class="psuedo-link" href="#"></a>
-                <img src="./assets/img/merch/TOB0055-797x450.jpg" class="card-img latest-addition__img" alt="...">
+                <img src="url:./assets/img/merch/TOB0055-797x450.jpg" class="card-img latest-addition__img" alt="...">
                 <div class="card-img-overlay d-flex flex-column justify-content-between">
                   <div class="card-icon"><i class="fab fa-youtube fa-2x"></i></div>
                   <div class="latest-addition__content">
@@ -623,7 +470,7 @@
             <div class="col-lg-3 col-md-6 mb-4">
               <div class="card text-white latest-addition__card h-100">
                 <a class="psuedo-link" href="#"></a>
-                <img src="./assets/img/merch/TOB0055-797x450.jpg" class="card-img latest-addition__img" alt="...">
+                <img src="url:./assets/img/merch/TOB0055-797x450.jpg" class="card-img latest-addition__img" alt="...">
                 <div class="card-img-overlay d-flex flex-column justify-content-between">
                   <div class="card-icon"><i class="far fa-images fa-2x"></i><span>9</span></div>
                   <div class="latest-addition__content">
@@ -639,7 +486,7 @@
             <div class="col-lg-3 col-md-6 mb-4">
               <div class="card text-white latest-addition__card h-100">
                 <a class="psuedo-link" href="#"></a>
-                <img src="./assets/img/merch/TOB0055-797x450.jpg" class="card-img latest-addition__img" alt="...">
+                <img src="url:./assets/img/merch/TOB0055-797x450.jpg" class="card-img latest-addition__img" alt="...">
                 <div class="card-img-overlay d-flex flex-column justify-content-between">
                   <div class="card-icon"><i class="far fa-images fa-2x"></i><span>5</span></div>
                   <div class="latest-addition__content">
@@ -655,7 +502,7 @@
             <div class="col-lg-3 col-md-6 mb-4">
               <div class="card text-white latest-addition__card h-100">
                 <a class="psuedo-link" href="#"></a>
-                <img src="./assets/img/merch/TOB0055-797x450.jpg" class="card-img latest-addition__img" alt="...">
+                <img src="url:./assets/img/merch/TOB0055-797x450.jpg" class="card-img latest-addition__img" alt="...">
                 <div class="card-img-overlay d-flex flex-column justify-content-between">
                   <div class="card-icon"><i class="far fa-images fa-2x"></i><span>12</span></div>
                   <div class="latest-addition__content">
@@ -671,7 +518,7 @@
             <div class="col-lg-3 col-md-6 mb-4">
               <div class="card text-white latest-addition__card h-100">
                 <a class="psuedo-link" href="#"></a>
-                <img src="./assets/img/merch/TOB0055-797x450.jpg" class="card-img latest-addition__img" alt="...">
+                <img src="url:./assets/img/merch/TOB0055-797x450.jpg" class="card-img latest-addition__img" alt="...">
                 <div class="card-img-overlay d-flex flex-column justify-content-between">
                   <div class="card-icon"><i class="far fa-images fa-2x"></i><span>14</span></div>
                   <div class="latest-addition__content">
@@ -709,7 +556,7 @@
           </div>
         </div>
         <div class="merch__img">
-          <img src="./assets/img/merch/TOB0055-797x450.jpg" alt="">
+          <img src="url:./assets/img/merch/TOB0055-797x450.jpg" alt="">
         </div>
       </div>
     </div>
@@ -752,281 +599,18 @@
       </div>
     </section>
     <!-- ******************* end of Newsletter Area ******************* -->
-
-    <!-- ******************* Footer Area ******************* -->
-    <div id="footer">
-      <div class="container">
-          <!-- Footer Sponsors -->
-          <div class="row footer__sponsors">
-              <ul class="footer__sponsors-list">
-                  <li>
-                      <a href="https://www.vodacom.co.za/" title="Vodacom" target="_blank">
-                          <img src="./assets/img/sponsors/vodacom-logo.png" alt="Vodacom logo">
-                      </a>
-                  </li>
-                  <li>
-                      <a href="https://www.nike.com/za/" title="Nike" target="_blank">
-                          <img src="./assets/img/sponsors/Sponsor_Nike_website.png" alt="Nike logo">
-                      </a>
-                  </li>
-                  <li>
-                      <a href="https://www.toyota.co.za/" title="Toyota" target="_blank">
-                          <img src="./assets/img/sponsors/4-kc-sp-toyota100-active.png" alt="Toyota logo">
-                      </a>
-                  </li>
-                  <li>
-                      <a href="https://medshield.co.za/" title="Medshield" target="_blank">
-                          <img src="./assets/img/sponsors/medshield-logo-update-1.png" alt="Medshield logo">
-                      </a>
-                  </li>
-                  <li>
-                      <a href="https://supersport.com/" title="SuperSport" target="_blank">
-                          <img src="./assets/img/sponsors/Sponsor_SS_website.png" alt="SuperSport logo">
-                      </a>
-                  </li>
-                  <li>
-                      <a href="https://www.carlingblacklabel.co.za/" title="Black Label" target="_blank">
-                          <img src="./assets/img/sponsors/Sponsor_CBL_website.png" alt="Carling Black Label logo">
-                      </a>
-                  </li>
-                  <li>
-                      <a href="https://www.kaelo.co.za/" title="Kaelo" target="_blank">
-                          <img src="./assets/img/sponsors/kaelo-logo1-1.png" alt="Kaelo logo">
-                      </a>
-                  </li>
-              </ul>
-          </div><!-- end of Footer Sponsors -->
-
-          <!-- Footer Sitemap -->
-          <div class="row footer__sitemap">
-
-              <div class="col-lg-2 col-6 col-md-4">
-                  <h6>News</h6>
-                  <ul>
-                      <li>
-                          <a href="">Latest</a>
-                      </li>
-                      <li>
-                          <a href="">Team</a>
-                      </li>
-                      <li>
-                          <a href="">Club</a>
-                      </li>
-                      <li>
-                          <a href="">Features</a>
-                      </li>
-                      <li>
-                          <a href="">Tickets & Travel</a>
-                      </li>
-                      <li>
-                          <a href="">Community</a>
-                      </li>
-                  </ul>
-              </div>
-
-              <div class="col-lg-2 col-6 col-md-4">
-                  <h6>Matches</h6>
-                  <ul>
-                      <li>
-                          <a href="">Fixtures</a>
-                      </li>
-                      <li>
-                          <a href="">Results</a>
-                      </li>
-                      <li>
-                          <a href="">Tables</a>
-                      </li>
-                  </ul>
-              </div>
-
-              <div class="col-lg-2 col-6 col-md-4">
-                  <h6>Teams</h6>
-                  <ul>
-                      <li>
-                          <a href="">Senior</a>
-                      </li>
-                      <li>
-                          <a href="">Reserve</a>
-                      </li>
-                      <li>
-                          <a href="">Youth Development Academy</a>
-                      </li>
-                      <li>
-                          <a href="">Rugby 7'S</a>
-                      </li>
-                  </ul>
-              </div>
-
-              <div class="col-lg-2 col-6 col-md-4">
-                  <h6>Fans</h6>
-                  <ul>
-                      <li>
-                          <a href="">Health & Wellness</a>
-                      </li>
-                      <li>
-                          <a href="">We're Amakhosi</a>
-                      </li>
-                      <li>
-                          <a href="">Membership</a>
-                      </li>
-                      <li>
-                          <a href="">Family Rules</a>
-                      </li>
-                      <li>
-                          <a href="">KC Mobile</a>
-                      </li>
-                      <li>
-                          <a href="">KC Insurance</a>
-                      </li>
-                      <li>
-                          <a href="">Retail</a>
-                      </li>
-                      <li>
-                          <a href="">Competitions</a>
-                      </li>
-                      <li>
-                          <a href="">Magazine</a>
-                      </li>
-                  </ul>
-              </div>
-
-              <div class="col-lg-2 col-6 col-md-4">
-                  <h6>Club</h6>
-                  <ul>
-                      <li>
-                          <a href="">Chairman</a>
-                      </li>
-                      <li>
-                          <a href="">History</a>
-                      </li>
-                      <li>
-                          <a href="">Corporate</a>
-                      </li>
-                      <li>
-                          <a href="">Community</a>
-                      </li>
-                      <li>
-                          <a href="">Sponsors</a>
-                      </li>
-                      <li>
-                          <a href="">KC Village</a>
-                      </li>
-                      <li>
-                          <a href="">KC Gym</a>
-                      </li>
-                      <li>
-                          <a href="">Trophy Room</a>
-                      </li>
-                  </ul>
-              </div>
-
-              <div class="col-lg-2 col-6 col-md-4">
-                  <h6>kctv</h6>
-                  <ul>
-                      <li>
-                          <a href="">Latest Videos</a>
-                      </li>
-                      <li>
-                          <a href="">On Camera</a>
-                      </li>
-                      <li>
-                          <a href="">Next Show</a>
-                      </li>
-                      <li>
-                          <a href="">Highlights</a>
-                      </li>
-                  </ul>
-              </div>
-
-              <div class="col-lg-2 col-6 col-md-4">
-                  <h6>Media</h6>
-                  <ul>
-                      <li>
-                          <a href="">Gallery</a>
-                      </li>
-                      <li>
-                          <a href="">Press Releases</a>
-                      </li>
-                      <li>
-                          <a href="">Photography</a>
-                      </li>
-                  </ul>
-              </div>
-
-              <div class="col-lg-2 col-6 col-md-4">
-                  <h6>Shop <i class="fas fa-external-link-alt"></i></h6>
-                  <ul>
-                      <li>
-                          <a href="">KC Digistore</a>
-                      </li>
-                  </ul>
-              </div>
-
-              <div class="col-lg-2 col-6 col-md-4">
-                  <h6>Help</h6>
-                  <ul>
-                      <li>
-                          <a href="">Contact Us</a>
-                      </li>
-                      <li>
-                          <a href="">Privacy Policy</a>
-                      </li>
-                  </ul>
-              </div>
-
-              <div class="col-lg-2 col-6 col-md-4">
-                  <h6>Subscribe</h6>
-                  <ul>
-                      <li>
-                          <a href="">Newsletter</a>
-                      </li>
-                  </ul>
-              </div>
-
-              <div class="col-lg-2 col-6 col-md-4">
-                  <h6>Join Us</h6>
-                  <ul class="footer__social-icons">
-                      <li class="pl-0">
-                          <a href="https://www.instagram.com/kcfcofficial/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                      </li>
-                      <li>
-                          <a href="https://www.facebook.com/kaizerchiefs/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                      </li>
-                      <li>
-                          <a href="https://twitter.com/kaizerchiefs"	target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-                      </li>
-                      <li>
-                          <a href="https://www.youtube.com/c/KaizerChiefsFootballClub" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-                      </li>
-                  </ul>
-              </div>
-              <div class="col-lg-2 col-6 col-md-4">
-                  <a href="">
-                      <img class="footer__img--filter" src="./assets/logo.png" alt="Kaizer Chiefs logo">
-                  </a>
-              </div>           
-          </div><!-- end of Footer Sitemap -->
-          <div class="row">
-              <div class="col-lg-12 text-center">
-                  <p class="footer__copyright">© 2021 Kaizer Chiefs FC. All rights reserved. No part of this site may be reproduced without our written permission.</p>
-              </div>
-          </div>
-      </div>
-    </div>
-    <!-- ******************* end of Footer Area ******************* -->
-
-
-
-
    
-    <!-- Datatable -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.2/js/dataTables.bootstrap5.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap5.min.js"></script>
-    <!-- end of Datatable -->
-    <script src="js/main.js"></script>
-    
+    <include src="partials/footer.html"></include>
+
+  
+  <!-- Datatable -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js" crossorigin></script>
+  <script src="https://cdn.datatables.net/1.11.2/js/dataTables.bootstrap5.min.js" crossorigin></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js" crossorigin></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap5.min.js" crossorigin></script>
+  <!-- end of Datatable -->
+  <script type="module" src="./index.js"></script>
+ 
 </body>
 </html>
