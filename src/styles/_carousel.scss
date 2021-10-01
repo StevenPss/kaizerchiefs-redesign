@@ -1,4 +1,5 @@
 .home-section {
+    background-color: $primary;
     .carousel-item {
         min-height: 100vh;
         background-position: center;
@@ -27,13 +28,11 @@
                     font-size: 7.2rem;
                     color: $secondary;
                     margin: 0 0 16px;
-                    opacity: 0;
                 }
                 .featured-article__subtitle{
-                    font-size: 3rem;
+                    font-size: 1.6rem;
                     margin: 0;
                     color: #eeeeee;
-                    opacity: 0;
                 }
                 .featured-article__btn{
                     border: 1px solid $accent;
@@ -49,14 +48,6 @@
                 }
             }
         }
-        &.active{
-            h2{
-                animation: fadeInLeft 0.5s ease forwards;
-            }
-            p{
-                animation: fadeInRight 0.5s ease forwards;
-            }
-        }
     }
     .carousel-controls{
         position: absolute;
@@ -64,6 +55,7 @@
         bottom: 40px;
         z-index: 10;
         transform: translateX(-50%);
+        opacity: 1;
     }
     .carousel-indicators{
         position: relative;
@@ -107,27 +99,6 @@
     .carousel-control-prev{
         left: -88px;
     }
-}
-
-@keyframes fadeInLeft{
-	0%{
-		opacity: 0;
-		transform: translateX(-32px);
-	}
-	100%{
-		opacity: 1;
-		transform: translateX(0px);
-	}
-}
-@keyframes fadeInRight{
-	0%{
-		opacity: 0;
-		transform: translateX(32px);
-	}
-	100%{
-		opacity: 1;
-		transform: translateX(0px);
-	}
 }
 
 @media(max-width: $md){
