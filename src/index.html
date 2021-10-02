@@ -17,8 +17,10 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.2/css/dataTables.bootstrap5.min.css" crossorigin>
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap5.min.css" crossorigin>
 </head>
-<body data-scroll-container>
+<body>
 
+  <include src="partials/alert.html"></include>
+  <div data-scroll-container class="dsc">
     <!-- preloader -->
     <div class="preloader">
       <svg id="logo" width="250" height="250" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.756 192.756">
@@ -37,7 +39,6 @@
     <!-- <div class="ball-cursor"></div> -->
 
     <include src="partials/nav.html"></include>
-    <include src="partials/alert.html"></include>
     <include src="partials/carousel.html"></include>
 
     <!-- ******************* Fixtures Area ******************* -->   
@@ -618,6 +619,7 @@
     <!-- ******************* end of Newsletter Area ******************* -->
    
     <include src="partials/footer.html"></include>
+  </div>
 
   
   <!-- Datatable -->
