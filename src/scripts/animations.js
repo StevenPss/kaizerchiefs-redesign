@@ -9,7 +9,6 @@ const animations = () => {
     const locoScroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
         smooth: true,
-        multiplier: 2,
         smartphone: {
             smooth: true
         },
@@ -38,7 +37,7 @@ const animations = () => {
     const preloaderLogo = document.querySelector('#logo');
 
     // Cursor
-    const ballCursor = document.querySelector('.ball-cursor');
+    // const ballCursor = document.querySelector('.ball-cursor');
 
     // navbar
     const navbar = document.querySelector('.js-main-nav');
@@ -98,29 +97,29 @@ const animations = () => {
 
     // Ball Cursor
 
-    gsap.set(".ball-cursor", {xPercent: -50, yPercent: -50});
+    // gsap.set(".ball-cursor", {xPercent: -50, yPercent: -50});
 
-    const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-    const mouse = { x: pos.x, y: pos.y };
-    const speed = 0.35;
+    // const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+    // const mouse = { x: pos.x, y: pos.y };
+    // const speed = 0.35;
 
-    const xSet = gsap.quickSetter(ballCursor, "x", "px");
-    const ySet = gsap.quickSetter(ballCursor, "y", "px");
+    // const xSet = gsap.quickSetter(ballCursor, "x", "px");
+    // const ySet = gsap.quickSetter(ballCursor, "y", "px");
 
-    window.addEventListener("mousemove", e => {    
-        mouse.x = e.x;
-        mouse.y = e.y;  
-    });
+    // window.addEventListener("mousemove", e => {    
+    //     mouse.x = e.x;
+    //     mouse.y = e.y;  
+    // });
 
-    gsap.ticker.add(() => {
-        // adjust speed for higher refresh monitors
-        const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio()); 
+    // gsap.ticker.add(() => {
+    //     // adjust speed for higher refresh monitors
+    //     const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio()); 
         
-        pos.x += (mouse.x - pos.x) * dt;
-        pos.y += (mouse.y - pos.y) * dt;
-        xSet(pos.x);
-        ySet(pos.y);
-    });
+    //     pos.x += (mouse.x - pos.x) * dt;
+    //     pos.y += (mouse.y - pos.y) * dt;
+    //     xSet(pos.x);
+    //     ySet(pos.y);
+    // });
 
     // Header
 
@@ -192,38 +191,38 @@ const animations = () => {
     
     // Fixtures
 
-    fixturesTL.from(
-        fixtureMonth,
-        {
-            duration: 0.6,
-            y: 40,
-            opacity: 0,
-            ease: "power3.out",
-            stagger: 0.2
-        }
-    ).from(
-        fixturesList,
-        {
-            duration: 0.6,
-            delay: -0.4,
-            y: 40,
-            opacity: 0,
-            ease: "power3.out",
-            stagger: 0.2
-        }
-    )
+    // fixturesTL.from(
+    //     fixtureMonth,
+    //     {
+    //         duration: 0.6,
+    //         y: 40,
+    //         opacity: 0,
+    //         ease: "power3.out",
+    //         stagger: 0.2
+    //     }
+    // ).from(
+    //     fixturesList,
+    //     {
+    //         duration: 0.6,
+    //         delay: -0.4,
+    //         y: 40,
+    //         opacity: 0,
+    //         ease: "power3.out",
+    //         stagger: 0.2
+    //     }
+    // )
 
-    // fixtures scroll trigger
-    ScrollTrigger.create({
-        autoAlpha: 0,
-        trigger: ".fixtures",
-        scroller: "[data-scroll-container]",
-        start: "0% 60%",
-        end: "+=300",
-        scrub: true,
-        // markers: true,
-        animation: fixturesTL
-    });
+    // // fixtures scroll trigger
+    // ScrollTrigger.create({
+    //     autoAlpha: 0,
+    //     trigger: ".fixtures",
+    //     scroller: "[data-scroll-container]",
+    //     start: "0% 60%",
+    //     end: "+=300",
+    //     // scrub: true,
+    //     // markers: true,
+    //     animation: fixturesTL
+    // });
 
     // Merch
 
@@ -306,7 +305,7 @@ const animations = () => {
         scroller: "[data-scroll-container]",
         start: "0% 60%",
         end: "+=300",
-        scrub: true,
+        // scrub: true,
         // markers: true,
         animation: standingsTableTL
     });
@@ -324,7 +323,7 @@ const animations = () => {
                 autoAlpha: 0,
                 trigger: latestAddition,
                 scroller: "[data-scroll-container]",
-                start: "0% 30%",
+                start: "0% 50%",
                 end: "+=600",
                 // markers: true,
                 animation: latestAdditionTL
@@ -359,7 +358,7 @@ const animations = () => {
         newsletterTitle,
         {
             duration: 0.6,
-            x: 40,
+            y: 40,
             opacity: 0,
             ease: "power3.out",
             stagger: 0.2
@@ -369,7 +368,7 @@ const animations = () => {
         {
             duration: 0.6,
             delay: -0.5,
-            x: -40,
+            y: 40,
             opacity: 0,
             ease: "power3.out",
             stagger: 0.2
@@ -379,7 +378,7 @@ const animations = () => {
         {
             duration: 0.6,
             delay: -0.5,
-            y: 40,
+            y: 60,
             opacity: 0,
             ease: "power3.out",
             stagger: 0.2
@@ -404,16 +403,16 @@ const animations = () => {
         footerSponserLi,
         {
             duration: 0.8,
-            x: 80,
+            x: -80,
             opacity: 0,
             ease: "power3.out"
         }
     ).from(
         footerSponserDiv,
         {
-            duration: 0.8,
-            delay: -0.2,
-            x: -80,
+            duration: 0.6,
+            delay: -0.6,
+            x: 40,
             opacity: 0,
             ease: "power3.out",
             stagger: 0.2
@@ -425,7 +424,7 @@ const animations = () => {
         autoAlpha: 0,
         trigger: "#footer",
         scroller: "[data-scroll-container]",
-        start: "0% 40%",
+        start: "0% 45%",
         end: "+=300",
         // markers: true,
         animation: footerTL
@@ -436,8 +435,8 @@ const animations = () => {
     masterTL
     .add(preloaderTL)
     .add(headerTL.play())
-    .add(fixturesTL)
-    .add(standingsTableTL);
+    // .add(fixturesTL)
+    // .add(standingsTableTL);
 
     // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
