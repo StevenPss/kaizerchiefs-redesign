@@ -9,12 +9,8 @@ const animations = () => {
     const locoScroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
         smooth: true,
-        smartphone: {
-            smooth: true
-        },
-        tablet: {
-            smooth: true
-        },
+        smartphone: { smooth: false },
+        tablet: { smooth: false },
     });
 
     // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
