@@ -1,0 +1,72 @@
+.standings-wrapper{
+    padding: 32px 0;
+    h2{
+        font-family: $heading_font;
+        font-size: 3.2rem;
+        padding-bottom: 20px;
+    }
+    .standings-bold{
+        font-weight: bold!important;
+        color: $primary!important;
+    }
+    table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before {
+        background-color: $accent;
+    }
+    .table{
+        font-size: 1.6rem;
+        td, th {
+            padding: 20px;
+            vertical-align: top;
+            //border-top: 1px solid #dee2e6;
+            border: none;
+        }
+        thead{
+            th {
+                vertical-align: bottom;
+                //border-bottom: 2px solid #dee2e6;
+                border: none;
+                color: $secondary-500;
+            }
+        }
+        tbody{
+            td{
+                &:first-child{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    #teamStandingsTable{
+        td, th {
+            vertical-align: middle;
+        }
+    }
+    table.dataTable.no-footer {
+        border: none;
+    }
+    .dataTables_wrapper{
+        width: 100%;
+    }
+    .team-standings-active{
+        background-color: $primary;
+        color: $secondary;
+        p{
+            font-weight: bold;
+        }
+    }
+    .team-standings{
+        display: flex;
+        align-items: center;
+        .team-standings-crest{
+            flex: 0 0 24px;
+            margin-right: 10px;
+            img{
+                max-width: 100%;
+            }
+        }
+        .team-standings-name{
+            margin: 0;
+            text-transform: capitalize;
+        }
+    }
+}

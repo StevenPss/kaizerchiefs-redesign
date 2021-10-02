@@ -1,0 +1,217 @@
+:root {
+    /* 
+    font-size: 10px;
+    where 10px = 1rem
+    remember rem stands for 'relative to font-size of the root element' (which is identical to the selector 'html')
+    */
+    font-size: 10px;
+}
+
+body{
+    font-family: $body_font;
+    background-color: $secondary;
+    color: $primary;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+        // color: $accent;
+    }
+}
+
+.psuedo-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+// .psuedo-link:hover img{
+//   -webkit-transform: scale(1.3) rotate(5deg);
+//   transform: scale(1.3) rotate(5deg);
+// }
+
+
+// Locomotive scroll
+/*! locomotive-scroll v4.1.1 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden; 
+}
+  
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+}
+  
+.has-scroll-smooth body {
+  overflow: hidden; 
+}
+  
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh; 
+}
+  
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap; 
+}
+  
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%; 
+}
+  
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0; }
+.c-scrollbar:hover {
+  transform: scaleX(1.45); 
+}
+.c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+  opacity: 1; 
+}
+[data-scroll-direction="horizontal"] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1); }
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+  transform: scaleY(1.3); 
+}
+  
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab; }
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing; 
+}
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0; 
+}
+
+.preloader {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  animation: fill-bg .6s ease-in forwards 3s;
+  z-index: 2000;
+  #logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+  }
+  #logo path:nth-child(1) {
+      stroke-width: 1;
+      stroke-dasharray: 700;
+      stroke-dashoffset: 700;
+      animation: line-anim 4s ease forwards, fill-1 .6s ease-in forwards 3s;
+  }
+  #logo path:nth-child(2) {
+      stroke-width: 1;
+      stroke-dasharray: 600;
+      stroke-dashoffset: 600;
+      animation: line-anim 4s ease forwards .3s, fill-2 .6s ease-in forwards 3s;
+  }
+  #logo path:nth-child(3) {
+      stroke-width: 1;
+      stroke-dasharray: 413;
+      stroke-dashoffset: 413;
+      animation: line-anim 3s ease forwards .6s;
+  }
+  #logo path:nth-child(4) {
+      stroke-width: 1;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: line-anim 3s ease forwards .9s;
+  }
+  #logo path:nth-child(5) {
+      stroke-width: 1;
+      stroke-dasharray: 187;
+      stroke-dashoffset: 187;
+      animation: line-anim 2s ease forwards 1.2s, fill-5 .6s ease-in forwards 3s;
+  }
+}
+  
+@keyframes line-anim {
+  to {
+      stroke-dashoffset: 0;
+  }
+}
+@keyframes fill-bg {
+  from {
+    background-color: #000;
+}
+  to {
+      background-color: $accent;
+  }
+}
+@keyframes fill-1 {
+  from {
+      fill: transparent;
+  }
+  to {
+      fill: #000;
+      stroke-width: 0;
+  }
+}
+@keyframes fill-2 {
+  from {
+      fill: transparent;
+  }
+  to {
+      fill: $accent;
+      stroke-width: 0;
+  }
+}
+@keyframes fill-5 {
+  from {
+      fill: transparent;
+  }
+  to {
+      fill: $secondary;
+      stroke-width: 0;
+  }
+}
+
+.ball-cursor {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid $accent;
+  border-radius: 50%;
+  z-index: 2001;
+  pointer-events: none;
+}
