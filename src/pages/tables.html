@@ -1,351 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaizer Chiefs Web Redesign</title>
+    <link rel="stylesheet" href="../styles.scss">
 
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
 
-    <!-- ******************* Sub header Area ******************* --
-    <div class="sub-header" style="background-image: linear-gradient(to right,rgba(37, 37, 37, .7), rgba(250, 166, 26, .4)), url('url:../assets/img/tables/stadium.jpg');">
-        <div class="container">
-            <div class="sub-header__primary">
-                <h2 class="sub-header__heading">Tables</h2>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#" class="active">Senior</a>
-                        </li>
-                        <li>
-                            <a href="#">Reserve</a>
-                        </li>
-                        <li>
-                            <a href="#">Youth Development</a>
-                        </li>
-                        <li>
-                            <a href="#">Rugby 7'S</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>		
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway&display=swap" 
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.2/css/dataTables.bootstrap5.min.css" crossorigin>
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap5.min.css" crossorigin>
+</head>
+<body>
+
+    
+    <div data-scroll-container class="dsc">
+        <include src="partials/nav.html"></include>
+        
+        <!-- ******************* Sub header Area ******************* -->
+        <div class="sub-header" style="background-image: linear-gradient(to right,rgba(37, 37, 37, .7), rgba(250, 166, 26, .4)), url('url:../assets/img/tables/stadium.jpg');" data-scroll-section>
+            <div class="container">
+                <div class="sub-header__primary">
+                    <h2 class="sub-header__heading">Tables</h2>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#" class="active">Senior</a>
+                            </li>
+                            <li>
+                                <a href="#">Reserve</a>
+                            </li>
+                            <li>
+                                <a href="#">Youth Development</a>
+                            </li>
+                            <li>
+                                <a href="#">Rugby 7'S</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>		
+            </div>
         </div>
-    </div>
-    <!-- ******************* end of Sub header Area ******************* -->
+        <!-- ******************* end of Sub header Area ******************* -->
 
-    <!-- ******************* Season & Competition Area ******************* --
-    <div class="filter-wrapper">
-        <div class="container">
-            <div class="filter-wrapper__grid">
-                <div class="filter-wrapper__season me-4">
-                    <select name="season" id="season">
-                        <option value="" selected>2021/22</option>
-                    </select>
-                </div>
-                <div class="filter-wrapper__competition">
-                    <select name="competition" id="competition">
-                        <option value="" selected>Dstv Premiership</option>
-                        <option value="">MTN 8</option>
-                        <option value="">Nedbank Cup</option>
-                        <option value="">CAF Champions League</option>
-                    </select>
+        <!-- ******************* Season & Competition Area ******************* -->
+        <div class="filter-wrapper" data-scroll-section>
+            <div class="container">
+                <div class="filter-wrapper__grid">
+                    <div class="filter-wrapper__season me-4">
+                        <select name="season" id="season">
+                            <option value="" selected>2021/22</option>
+                        </select>
+                    </div>
+                    <div class="filter-wrapper__competition">
+                        <select name="competition" id="competition">
+                            <option value="" selected>Dstv Premiership</option>
+                            <option value="">MTN 8</option>
+                            <option value="">Nedbank Cup</option>
+                            <option value="">CAF Champions League</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- ******************* end of Season & Competition Area ******************* -->
+        <!-- ******************* end of Season & Competition Area ******************* -->
 
-    <!-- ******************* Standings Area ******************* --
-    <div class="standings-wrapper">
-        <div class="container">
-            <h2>League</h2>
-            <div class="row">
-                <table id="teamStandingsTable" class="table table-striped dt-responsive nowrap" style="width:100%">
-                    <thead>
-                        <tr>
-                            <th class="standings-bold">POS</th>
-                            <th class="standings-bold">TEAM</th>
-                            <th>PTS</th>
-                            <th>P</th>
-                            <th>W</th>
-                            <th>D</th>
-                            <th>L</th>
-                            <th>GS</th>
-                            <th>GA</th>
-                            <th>GD</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td class="team-standings">
-                                <div class="team-standings-crest">
-                                    <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
-                                </div>
-                                <p class="team-standings-name">Kaizer Chiefs</p>
-                            </td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td class="team-standings">
-                                <div class="team-standings-crest">
-                                    <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
-                                </div>
-                                <p class="team-standings-name">Kaizer Chiefs</p>
-                            </td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td class="team-standings">
-                                <div class="team-standings-crest">
-                                    <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
-                                </div>
-                                <p class="team-standings-name">Kaizer Chiefs</p>
-                            </td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td class="team-standings">
-                                <div class="team-standings-crest">
-                                    <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
-                                </div>
-                                <p class="team-standings-name">Kaizer Chiefs</p>
-                            </td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td class="team-standings">
-                                <div class="team-standings-crest">
-                                    <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
-                                </div>
-                                <p class="team-standings-name">Kaizer Chiefs</p>
-                            </td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td class="team-standings">
-                                <div class="team-standings-crest">
-                                    <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
-                                </div>
-                                <p class="team-standings-name">Kaizer Chiefs</p>
-                            </td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td class="team-standings">
-                                <div class="team-standings-crest">
-                                    <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
-                                </div>
-                                <p class="team-standings-name">Kaizer Chiefs</p>
-                            </td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr class="team-standings-active">
-                            <td>8</td>
-                            <td class="team-standings">
-                                <div class="team-standings-crest">
-                                    <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
-                                </div>
-                                <p class="team-standings-name">Kaizer Chiefs</p>
-                            </td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td class="team-standings">
-                                <div class="team-standings-crest">
-                                    <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
-                                </div>
-                                <p class="team-standings-name">Kaizer Chiefs</p>
-                            </td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td class="team-standings">
-                                <div class="team-standings-crest">
-                                    <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
-                                </div>
-                                <p class="team-standings-name">Kaizer Chiefs</p>
-                            </td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td class="team-standings">
-                                <div class="team-standings-crest">
-                                    <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
-                                </div>
-                                <p class="team-standings-name">Kaizer Chiefs</p>
-                            </td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>12</td>
-                            <td class="team-standings">
-                                <div class="team-standings-crest">
-                                    <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
-                                </div>
-                                <p class="team-standings-name">Kaizer Chiefs</p>
-                            </td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>13</td>
-                            <td class="team-standings">
-                                <div class="team-standings-crest">
-                                    <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
-                                </div>
-                                <p class="team-standings-name">Kaizer Chiefs</p>
-                            </td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>14</td>
-                            <td class="team-standings">
-                                <div class="team-standings-crest">
-                                    <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
-                                </div>
-                                <p class="team-standings-name">Kaizer Chiefs</p>
-                            </td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>15</td>
-                            <td class="team-standings">
-                                <div class="team-standings-crest">
-                                    <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
-                                </div>
-                                <p class="team-standings-name">Kaizer Chiefs</p>
-                            </td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>16</td>
-                            <td class="team-standings">
-                                <div class="team-standings-crest">
-                                    <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
-                                </div>
-                                <p class="team-standings-name">Kaizer Chiefs</p>
-                            </td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                                            
-                    </tbody>
-                </table>
-                <!-- <p>Last Updated: 06 July 2021</p> --
+        <!-- ******************* Standings Area ******************* -->
+        <div class="standings-wrapper" data-scroll-section>
+            <div class="container">
+                <h2 data-scroll data-scroll-speed="-0.6" data-scroll-direction="horizontal" data-scroll-delay="0.1">DSTV Premiership</h2>
+                <div class="row">
+                    <table id="teamStandingsTable" class="table table-striped dt-responsive nowrap" style="width:100%">
+                        <thead data-scroll data-scroll-speed="0.7" data-scroll-delay="0.2">
+                            <tr>
+                                <th class="standings-bold">POS</th>
+                                <th class="standings-bold">TEAM</th>
+                                <th>PTS</th>
+                                <th>P</th>
+                                <th>W</th>
+                                <th>D</th>
+                                <th>L</th>
+                                <th>GS</th>
+                                <th>GA</th>
+                                <th>GD</th>
+                            </tr>
+                        </thead>
+                        <tbody data-scroll data-scroll-speed="0.4">
+                            <tr>
+                                <td>1</td>
+                                <td class="team-standings">
+                                    <div class="team-standings-crest">
+                                        <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
+                                    </div>
+                                    <p class="team-standings-name">Kaizer Chiefs</p>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="team-standings">
+                                    <div class="team-standings-crest">
+                                        <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
+                                    </div>
+                                    <p class="team-standings-name">Kaizer Chiefs</p>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="team-standings">
+                                    <div class="team-standings-crest">
+                                        <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
+                                    </div>
+                                    <p class="team-standings-name">Kaizer Chiefs</p>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td class="team-standings">
+                                    <div class="team-standings-crest">
+                                        <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
+                                    </div>
+                                    <p class="team-standings-name">Kaizer Chiefs</p>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td class="team-standings">
+                                    <div class="team-standings-crest">
+                                        <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
+                                    </div>
+                                    <p class="team-standings-name">Kaizer Chiefs</p>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td class="team-standings">
+                                    <div class="team-standings-crest">
+                                        <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
+                                    </div>
+                                    <p class="team-standings-name">Kaizer Chiefs</p>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td class="team-standings">
+                                    <div class="team-standings-crest">
+                                        <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
+                                    </div>
+                                    <p class="team-standings-name">Kaizer Chiefs</p>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="team-standings-active">
+                                <td>8</td>
+                                <td class="team-standings">
+                                    <div class="team-standings-crest">
+                                        <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
+                                    </div>
+                                    <p class="team-standings-name">Kaizer Chiefs</p>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td class="team-standings">
+                                    <div class="team-standings-crest">
+                                        <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
+                                    </div>
+                                    <p class="team-standings-name">Kaizer Chiefs</p>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td class="team-standings">
+                                    <div class="team-standings-crest">
+                                        <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
+                                    </div>
+                                    <p class="team-standings-name">Kaizer Chiefs</p>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td class="team-standings">
+                                    <div class="team-standings-crest">
+                                        <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
+                                    </div>
+                                    <p class="team-standings-name">Kaizer Chiefs</p>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td class="team-standings">
+                                    <div class="team-standings-crest">
+                                        <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
+                                    </div>
+                                    <p class="team-standings-name">Kaizer Chiefs</p>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td class="team-standings">
+                                    <div class="team-standings-crest">
+                                        <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
+                                    </div>
+                                    <p class="team-standings-name">Kaizer Chiefs</p>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td class="team-standings">
+                                    <div class="team-standings-crest">
+                                        <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
+                                    </div>
+                                    <p class="team-standings-name">Kaizer Chiefs</p>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td class="team-standings">
+                                    <div class="team-standings-crest">
+                                        <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
+                                    </div>
+                                    <p class="team-standings-name">Kaizer Chiefs</p>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td class="team-standings">
+                                    <div class="team-standings-crest">
+                                        <img src="url:../assets/logo.png" alt="Kaizer Chiefs">
+                                    </div>
+                                    <p class="team-standings-name">Kaizer Chiefs</p>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                                                
+                        </tbody>
+                    </table>
+                    <!-- <p>Last Updated: 06 July 2021</p> -->
+                </div>
             </div>
         </div>
+        <!-- ******************* end of Standings Area ******************* -->
+
+        <!-- ******************* Merchandise Area ******************* -->
+        <div class="merch" data-scroll-section>
+            <div class="container merch__container">
+            <div class="merch__promo">
+                <div data-scroll data-scroll-speed="1">
+                <p>Kaizer Chiefs 2021/22 Home & Away kits - Buy Now!</p>
+                <a class="btn btn-secondary rounded-0" href="https://www.kcdigistore.com/" target="_blank">Shop now</a>
+                </div>
+            </div>
+            <div class="merch__img">
+                <img src="url:../assets/img/merch/TOB0055-797x450.jpg" alt="">
+            </div>
+            </div>
+        </div>
+        <!-- ******************* end of Merchandise Area ******************* -->
+  
+      <!-- ******************* Newsletter Area ******************* -->
+      <section class="newsletter" data-scroll-section>
+        <div class="container">
+          <header class="newsletter__header">
+            <h3 class="newsletter__title">Be the first to know</h3>
+            <h4 class="newsletter__subtitle">Join our newsletter</h4>
+          </header>
+          <form id="newsletter__form" action="" method="post">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control form-text-field" id="inputFname" placeholder="First name" required>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control form-text-field" id="inputLname" placeholder="Last name" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+              <input type="email" class="form-control form-text-field" id="inputEmail" placeholder="Email address" required>
+            </div>
+            </div>
+            <div class="form-row d-flex">
+              <div class="form-group col-md-6">
+                <input type="tel" class="form-control form-text-field" id="inputPhone" placeholder="Phone number" required>
+              </div>
+              <div class="form-group col-md-6 d-flex align-items-center">
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Yes, I’d like to receive latest news from Kaizer Chiefs</label>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </section>
+      <!-- ******************* end of Newsletter Area ******************* -->
+
+        <include src="partials/footer.html"></include>
     </div>
-    <!-- ******************* end of Standings Area ******************* -->
+
+
+  <!-- Datatable -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js" crossorigin></script>
+  <script src="https://cdn.datatables.net/1.11.2/js/dataTables.bootstrap5.min.js" crossorigin></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js" crossorigin></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap5.min.js" crossorigin></script>
+  <!-- end of Datatable -->
+  <script type="module" src="../index.js"></script>
+ 
+</body>
+</html>
