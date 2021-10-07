@@ -1,0 +1,87 @@
+.team{
+    padding: 40px 0;
+    .team__list{
+        h2{
+            font-size: 2.4rem;
+            font-family: $heading_font;
+            text-transform: capitalize;
+            padding: 30px 0;
+        }
+        .team__card{
+            border-radius: 0;
+            font-family: $heading_font;
+            background-color: $primary;
+            &:hover{
+                border-color: $accent;
+                background-color: $accent;
+                transition: all ease-in-out .2s;
+            }
+            .card-img-overlay{
+                background-color: transparent; 
+                background-image: linear-gradient(rgba(19,25,40,0) 0%, $primary 100%);
+                .card-title{
+                    font-weight: bold;
+                    font-size: 3.2rem;
+                }
+                .team__info{
+                    .card-text{
+                        text-transform: uppercase;
+                        font-size: 1.2rem;
+                        color: $accent;
+                        line-height: 0;
+                    }
+                    .card-subtitle{
+                        font-size: 2.4rem;
+                        text-transform: capitalize;
+                    }
+                }
+                .link{
+                    //border-top: 1px solid $secondary;
+                    text-transform: uppercase;
+                    font-size: 1.1rem;
+                    .card-link{
+                        i{
+                            color: $accent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $sm){
+    .team{
+        .team__list{
+            .team__card{
+                align-items: flex-end;
+                .card-img{
+                    flex: 0 0 100px;
+                    //height: 75px;
+                    width: 100px;
+                    object-fit: contain;
+                }
+                .card-img-overlay{
+                    .card-title{
+                        font-size: 1.8rem;
+                    }
+                    .team__info{
+                        .card-text{
+                            font-size: 0.9rem;
+                        }
+                        .card-subtitle{
+                            font-size: 2.2rem;
+                        }
+                    }
+                    .link{
+                        .card-link{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            
+        }
+    
+    }
+}
