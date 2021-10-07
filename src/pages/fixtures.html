@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaizer Chiefs Web Redesign</title>
+    <link rel="stylesheet" href="../styles.scss">
+
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway&display=swap" 
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.2/css/dataTables.bootstrap5.min.css" crossorigin>
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap5.min.css" crossorigin>
+</head>
+<body>
+
+    
+    <div data-scroll-container class="dsc">
+        <include src="partials/nav.html"></include>
+        
+        <!-- ******************* Sub header Area ******************* -->
+        <div class="sub-header" style="background-image: linear-gradient(to right,rgba(37, 37, 37, .7), rgba(250, 166, 26, .4)), url('url:../assets/img/tables/stadium.jpg');" data-scroll-section>
+            <div class="container">
+                <div class="sub-header__primary">
+                    <h2 class="sub-header__heading">Fixtures</h2>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#" class="active">Senior</a>
+                            </li>
+                            <li>
+                                <a href="#">Reserve</a>
+                            </li>
+                            <li>
+                                <a href="#">Youth Development</a>
+                            </li>
+                            <li>
+                                <a href="#">Rugby 7'S</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>		
+            </div>
+        </div>
+        <!-- ******************* end of Sub header Area ******************* -->
+
+        <!-- ******************* Season & Competition Area ******************* -->
+        <div class="filter-wrapper" data-scroll-section>
+            <div class="container">
+                <div class="filter-wrapper__grid">
+                    <div class="filter-wrapper__season me-4">
+                        <select name="season" id="season">
+                            <option value="" selected>2021/22</option>
+                        </select>
+                    </div>
+                    <div class="filter-wrapper__competition">
+                        <select name="competition" id="competition">
+                            <option value="" selected>Dstv Premiership</option>
+                            <option value="">MTN 8</option>
+                            <option value="">Nedbank Cup</option>
+                            <option value="">CAF Champions League</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ******************* end of Season & Competition Area ******************* -->
+
+        <!-- ******************* Fixtures Area ******************* -->   
+        <article class="fixtures pb-1" data-scroll-section>
+          <div class="container">
+            <div class="row">
+    
+              <div data-scroll data-scroll-speed="1.3" data-scroll-delay="0.2" class="fixtures__item">
+                <header class="fixtures__header">
+                  <h6 class="fixtures__header-month">October</h6>
+                  <p class="fixtures__header-note"><span><i class="far fa-calendar-alt" aria-hidden="true"></i> All times are in your local time zone</span></p>
+                </header>
+                <div class="fixtures-list">
+                  <ol class="fixtures-list__list">
+                    <li class="match-item">
+                      <div class="match-item__container">
+                        <div class="match-item__competition">
+                          <div class="match-item__competition-icon">
+                            <div class="match-item__competition-img">
+                              <img src="url:../assets/img/competitions/dstv-premiership.png" alt="DSTV Premiership">
+                            </div>
+                          </div>
+                          <div class="match-item__competition-info">
+                            <div class="match-item__date-location">
+                              <span class="match-item__date">Saturday 2 October</span>
+                              <span class="match-item__stadium">FNB Stadium</span>
+                            </div>
+                            <div class="match-item__kickoff-container">
+                              <div class="match-item__team-container">
+                                <span class="match-item__team match-item__team--home">Kaizer Chiefs</span>
+                                <img class="match-item__team-crest" src="url:../assets/logo.png" alt="Home team crest">
+                              </div>
+                              <div class="match-item__match-detail">
+                                <!-- <div class="match-item__score match-item__score--completed">
+                                  <span>2</span>
+                                  <span>1</span>
+                                </div> -->
+                                <time class="match-item__kickoff">
+                                  <span class="match-item__kickoff-label">KO </span>16:00
+                                </time>
+                              </div>
+                              <div class="match-item__team-container">
+                                <img class="match-item__team-crest" src="url:../assets/logo.png" alt="Away team crest">
+                                <span class="match-item__team match-item__team--away">Tshakhuma Tsha Madzivhandila</span>
+                              </div>
+                            </div>
+                            <!-- <div class="match_item__highlights">
+                              <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+                            </div> -->
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="match-item">
+                      <div class="match-item__container">
+                        <div class="match-item__competition">
+                          <div class="match-item__competition-icon">
+                            <div class="match-item__competition-img">
+                              <img src="url:../assets/img/competitions/dstv-premiership.png" alt="DSTV Premiership">
+                            </div>
+                          </div>
+                          <div class="match-item__competition-info">
+                            <div class="match-item__date-location">
+                              <span class="match-item__date">Saturday 2 October</span>
+                              <span class="match-item__stadium">FNB Stadium</span>
+                            </div>
+                            <div class="match-item__kickoff-container">
+                              <div class="match-item__team-container">
+                                <span class="match-item__team match-item__team--home">Kaizer Chiefs</span>
+                                <img class="match-item__team-crest" src="url:../assets/logo.png" alt="Home team crest">
+                              </div>
+                              <div class="match-item__match-detail">
+                                <!-- <div class="match-item__score match-item__score--completed">
+                                  <span>2</span>
+                                  <span>1</span>
+                                </div> -->
+                                <time class="match-item__kickoff">
+                                  <span class="match-item__kickoff-label">KO </span>16:00
+                                </time>
+                              </div>
+                              <div class="match-item__team-container">
+                                <img class="match-item__team-crest" src="url:../assets/logo.png" alt="Away team crest">
+                                <span class="match-item__team match-item__team--away">Tshakhuma Tsha Madzivhandila</span>
+                              </div>
+                            </div>
+                            <!-- <div class="match_item__highlights">
+                              <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+                            </div> -->
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <div data-scroll data-scroll-speed="1.3" data-scroll-delay="0.2" class="fixtures__item">
+                <header class="fixtures__header">
+                  <h6 class="fixtures__header-month">October</h6>
+                  <p class="fixtures__header-note"><span><i class="far fa-calendar-alt" aria-hidden="true"></i> All times are in your local time zone</span></p>
+                </header>
+                <div class="fixtures-list">
+                  <ol class="fixtures-list__list">
+                    <li class="match-item">
+                      <div class="match-item__container">
+                        <div class="match-item__competition">
+                          <div class="match-item__competition-icon">
+                            <div class="match-item__competition-img">
+                              <img src="url:../assets/img/competitions/dstv-premiership.png" alt="DSTV Premiership">
+                            </div>
+                          </div>
+                          <div class="match-item__competition-info">
+                            <div class="match-item__date-location">
+                              <span class="match-item__date">Saturday 2 October</span>
+                              <span class="match-item__stadium">FNB Stadium</span>
+                            </div>
+                            <div class="match-item__kickoff-container">
+                              <div class="match-item__team-container">
+                                <span class="match-item__team match-item__team--home">Kaizer Chiefs</span>
+                                <img class="match-item__team-crest" src="url:../assets/logo.png" alt="Home team crest">
+                              </div>
+                              <div class="match-item__match-detail">
+                                <!-- <div class="match-item__score match-item__score--completed">
+                                  <span>2</span>
+                                  <span>1</span>
+                                </div> -->
+                                <time class="match-item__kickoff">
+                                  <span class="match-item__kickoff-label">KO </span>16:00
+                                </time>
+                              </div>
+                              <div class="match-item__team-container">
+                                <img class="match-item__team-crest" src="url:../assets/logo.png" alt="Away team crest">
+                                <span class="match-item__team match-item__team--away">Tshakhuma Tsha Madzivhandila</span>
+                              </div>
+                            </div>
+                            <!-- <div class="match_item__highlights">
+                              <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+                            </div> -->
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="match-item">
+                      <div class="match-item__container">
+                        <div class="match-item__competition">
+                          <div class="match-item__competition-icon">
+                            <div class="match-item__competition-img">
+                              <img src="url:../assets/img/competitions/dstv-premiership.png" alt="DSTV Premiership">
+                            </div>
+                          </div>
+                          <div class="match-item__competition-info">
+                            <div class="match-item__date-location">
+                              <span class="match-item__date">Saturday 2 October</span>
+                              <span class="match-item__stadium">FNB Stadium</span>
+                            </div>
+                            <div class="match-item__kickoff-container">
+                              <div class="match-item__team-container">
+                                <span class="match-item__team match-item__team--home">Kaizer Chiefs</span>
+                                <img class="match-item__team-crest" src="url:../assets/logo.png" alt="Home team crest">
+                              </div>
+                              <div class="match-item__match-detail">
+                                <!-- <div class="match-item__score match-item__score--completed">
+                                  <span>2</span>
+                                  <span>1</span>
+                                </div> -->
+                                <time class="match-item__kickoff">
+                                  <span class="match-item__kickoff-label">KO </span>16:00
+                                </time>
+                              </div>
+                              <div class="match-item__team-container">
+                                <img class="match-item__team-crest" src="url:../assets/logo.png" alt="Away team crest">
+                                <span class="match-item__team match-item__team--away">Tshakhuma Tsha Madzivhandila</span>
+                              </div>
+                            </div>
+                            <!-- <div class="match_item__highlights">
+                              <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+                            </div> -->
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+              </div>              
+
+            </div>
+          </div>
+        </article>
+        <!-- ******************* end of Fixtures Area ******************* -->
+
+        <!-- ******************* Merchandise Area ******************* -->
+        <div class="merch" data-scroll-section>
+            <div class="container merch__container">
+            <div class="merch__promo">
+                <div data-scroll data-scroll-speed="1">
+                <p>Kaizer Chiefs 2021/22 Home & Away kits - Buy Now!</p>
+                <a class="btn btn-secondary rounded-0" href="https://www.kcdigistore.com/" target="_blank">Shop now</a>
+                </div>
+            </div>
+            <div class="merch__img">
+                <img src="url:../assets/img/merch/TOB0055-797x450.jpg" alt="">
+            </div>
+            </div>
+        </div>
+        <!-- ******************* end of Merchandise Area ******************* -->
+  
+        <!-- ******************* Newsletter Area ******************* -->
+        <section class="newsletter" data-scroll-section>
+          <div class="container">
+            <header class="newsletter__header">
+              <h3 class="newsletter__title">Be the first to know</h3>
+              <h4 class="newsletter__subtitle">Join our newsletter</h4>
+            </header>
+            <form id="newsletter__form" action="" method="post">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control form-text-field" id="inputFname" placeholder="First name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control form-text-field" id="inputLname" placeholder="Last name" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                <input type="email" class="form-control form-text-field" id="inputEmail" placeholder="Email address" required>
+              </div>
+              </div>
+              <div class="form-row d-flex">
+                <div class="form-group col-md-6">
+                  <input type="tel" class="form-control form-text-field" id="inputPhone" placeholder="Phone number" required>
+                </div>
+                <div class="form-group col-md-6 d-flex align-items-center">
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Yes, I’d like to receive latest news from Kaizer Chiefs</label>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </section>
+        <!-- ******************* end of Newsletter Area ******************* -->
+
+        <include src="partials/footer.html"></include>
+    </div>
+
+
+  <!-- Datatable -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js" crossorigin></script>
+  <script src="https://cdn.datatables.net/1.11.2/js/dataTables.bootstrap5.min.js" crossorigin></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js" crossorigin></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap5.min.js" crossorigin></script>
+  <!-- end of Datatable -->
+  <script type="module" src="../index.js"></script>
+ 
+</body>
+</html>
