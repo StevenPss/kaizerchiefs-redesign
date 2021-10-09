@@ -1,24 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaizer Chiefs Web Redesign</title>
-    <link rel="stylesheet" href="../styles.scss">
-
-    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway&display=swap" 
-      rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.2/css/dataTables.bootstrap5.min.css" crossorigin>
-    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap5.min.css" crossorigin>
-</head>
-<body>
-
+<include src="partials/header.html" locals='{
+    "text": "Teams - Kaizer Chiefs Redesign"
+  }'></include>
+    <include src="partials/preloader.html"></include>
+    <include src="partials/alert.html"></include>
     
     <div data-scroll-container class="dsc">
         <include src="partials/nav.html"></include>
@@ -414,15 +398,4 @@
         <include src="partials/footer.html"></include>
     </div>
 
-
-  <!-- Datatable -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js" crossorigin></script>
-  <script src="https://cdn.datatables.net/1.11.2/js/dataTables.bootstrap5.min.js" crossorigin></script>
-  <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js" crossorigin></script>
-  <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap5.min.js" crossorigin></script>
-  <!-- end of Datatable -->
-  <script type="module" src="../index.js"></script>
- 
-</body>
-</html>
+<include src="partials/scripts.html"></include>

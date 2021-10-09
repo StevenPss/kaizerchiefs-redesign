@@ -1,5 +1,6 @@
 .latest-addition{
     padding: 40px 0;
+    will-change: transform, opacity;
     h2{
         font-family: $heading_font;
         font-size: 3.2rem;
