@@ -34,97 +34,132 @@ const animations = () => {
     });
 
     // Preloader
-    const preloaderClass = document.querySelector('.preloader');
-    const preloaderLogo = document.querySelector('#logo');
+    const preloader = document.querySelector('.preloader');
+    const preloaderPercent = document.querySelector('.preloader #percent');
+    const preloaderBar = document.querySelector('.preloader #bar');
+    const preloaderBarCon = document.querySelector('.preloader #bar #barconfrm');
+    const firstChild = 1;
+    const lastChild = 2;
+    const boxFC = document.querySelector(`.preloader .box:nth-child(${firstChild})`);
+    const boxLC = document.querySelector(`.preloader .box:nth-child(${lastChild})`);
+
+    //[TODO run the preloader using gsap instead of css]
 
     // Cursor
     // const ballCursor = document.querySelector('.ball-cursor');
 
     // navbar
     const navbar = document.querySelector('.js-main-nav');
-
     // alert
     const alertNotification = document.querySelector('.covid-19-information');
-
     // carousel content
     const carouselh2 = document.querySelectorAll('.featured-article .featured-article__title');
     const carouselbtn = document.querySelectorAll('.featured-article .featured-article__btn');
     const carouselControls = document.querySelectorAll('.carousel-controls');
-
-    // Fixtures Area
-    // const fixtureMonth = document.querySelectorAll('.fixtures__header');
-    // const fixturesList = document.querySelectorAll('.fixtures-list');
-
+    const carouselItem = document.querySelectorAll('.carousel-item');
      // Standings Area
     const standingsTableH2 = document.querySelectorAll('.standings-wrapper h2');
     const standingsTableHead = document.querySelectorAll('#teamStandingsTable thead tr');
     const standingsTableBody = document.querySelectorAll('#teamStandingsTable tbody tr');
-
     // Newsletter Area
     const newsletterTitle = document.querySelectorAll('.newsletter__header .newsletter__title');
     const newsletterSubTitle = document.querySelectorAll('.newsletter__header .newsletter__subtitle');
     const newsletterFormGrp = document.querySelectorAll('#newsletter__form');
-
     // Footer Area
     const footerSponserLi = document.querySelectorAll('.footer__sponsors-list');
     const footerSponserDiv = document.querySelectorAll('.footer__sitemap');
-    
-
     // Timelines
-    const preloaderTL = gsap.timeline();
+    const preloaderTL = gsap.timeline({paused:true});
     const headerTL = gsap.timeline({paused:true});
     // const fixturesTL = gsap.timeline();
     const standingsTableTL = gsap.timeline();
     const newsletterTL = gsap.timeline();
     const footerTL = gsap.timeline();
-
     const masterTL = gsap.timeline();
 
-
     // Preloader
-    if(preloaderLogo && preloaderClass){
+    var animPlayed = localStorage.getItem("loadingAnimPlayed");
+    if(!animPlayed){
+        if(preloader && preloaderPercent && preloaderBar){
+            preloaderTL.to(
+                [preloaderPercent,preloaderBar],
+                {
+                    duration: 0.2,
+                    opacity: 0,
+                    zIndex: -1
+                }
+            ).to(
+                boxFC,
+                {
+                    duration: 1.2,
+                    y: "-50vh",
+                    stagger: 0.3
+                },
+                'start'
+            ).to(
+                boxLC,
+                {
+                    duration: 1.2,
+                    y: "50vh",
+                    stagger: 0.3
+                },
+                'start'
+            ).from(
+                preloader,
+                {
+                    duration: 0.2,
+                    opacity: 1,
+                    visibility: 'visible'
+                }
+            ).from(
+                carouselItem,
+                {
+                    duration: 1.4,
+                    scale: 1.6,
+                    ease: "power2.easeInOut",
+                    delay: -1.4,
+                    onComplete() {
+                        localStorage.setItem("loadingAnimPlayed", true)
+                    }
+                }
+            )
+    
+            let width = 1;
+            let id;
+            let move = () =>{
+                id = setInterval(frame,10);
+            }
+            let frame = () => {
+                if(width>=100){
+                    clearInterval(id);
+                    masterTL
+                    .add(preloaderTL.play())
+                    .add(headerTL.play())
+                    .add(standingsTableTL);
+                }
+                else{
+                    width++;
+                    preloaderBarCon.style.width = width + "%";
+                    preloaderPercent.innerHTML = width + "%";
+                }
+            }
+            window.onload = function (){move();};
+        }
+    }else{
         preloaderTL.to(
-            preloaderLogo, 
-            {
-                yPercent: -20,
-                opacity: 0,
-                delay: 4
-            }).to(
-            preloaderClass, 
-            {
-                transform: 'scaleY(0)', 
-                transformOrigin: 'top', 
-                delay: '-=3'
+            preloader,
+            {   
+                duration: 0,
+                opacity:0, 
+                display:"none"
             }
         )
+        masterTL
+        .add(preloaderTL.play())
+        .add(headerTL.play())
+        .add(standingsTableTL);
     }
-
-    // Ball Cursor
-
-    // gsap.set(".ball-cursor", {xPercent: -50, yPercent: -50});
-
-    // const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-    // const mouse = { x: pos.x, y: pos.y };
-    // const speed = 0.35;
-
-    // const xSet = gsap.quickSetter(ballCursor, "x", "px");
-    // const ySet = gsap.quickSetter(ballCursor, "y", "px");
-
-    // window.addEventListener("mousemove", e => {    
-    //     mouse.x = e.x;
-    //     mouse.y = e.y;  
-    // });
-
-    // gsap.ticker.add(() => {
-    //     // adjust speed for higher refresh monitors
-    //     const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio()); 
-        
-    //     pos.x += (mouse.x - pos.x) * dt;
-    //     pos.y += (mouse.y - pos.y) * dt;
-    //     xSet(pos.x);
-    //     ySet(pos.y);
-    // });
-
+    // window.onbeforeunload = function (){localStorage.clear();};
     // Header
     if(navbar || (carouselh2 && carouselbtn && carouselControls) || alertNotification){
         headerTL.from(
@@ -167,7 +202,6 @@ const animations = () => {
             }
         )
     }
-    
     // Toggle navbar based on scroll direction [navbar]
     if(navbar){
         const showAnim = gsap.from(navbar, { 
@@ -185,42 +219,6 @@ const animations = () => {
             }
         });  
     }      
-    
-    // Fixtures
-
-    // fixturesTL.from(
-    //     fixtureMonth,
-    //     {
-    //         duration: 0.6,
-    //         y: 40,
-    //         opacity: 0,
-    //         ease: "power3.out",
-    //         stagger: 0.2
-    //     }
-    // ).from(
-    //     fixturesList,
-    //     {
-    //         duration: 0.6,
-    //         delay: -0.4,
-    //         y: 40,
-    //         opacity: 0,
-    //         ease: "power3.out",
-    //         stagger: 0.2
-    //     }
-    // )
-
-    // // fixtures scroll trigger
-    // ScrollTrigger.create({
-    //     autoAlpha: 0,
-    //     trigger: ".fixtures",
-    //     scroller: "[data-scroll-container]",
-    //     start: "0% 60%",
-    //     end: "+=300",
-    //     // scrub: true,
-    //     // markers: true,
-    //     animation: fixturesTL
-    // });
-
     // Merch
     const merch = document.querySelectorAll('.merch');
     if(merch){
@@ -232,13 +230,11 @@ const animations = () => {
     
             var merchTL = gsap.timeline({
                 scrollTrigger:{
-                    autoAlpha: 0,
+                    // autoAlpha: 0,
                     trigger: merch,
                     scroller: "[data-scroll-container]",
                     start: "0% 60%",
                     end: "+=300",
-                    scrub: true,
-                    // markers: true,
                     animation: merchTL
                 }
             });
@@ -274,7 +270,6 @@ const animations = () => {
             )
         });
     }
-
     // Standings
     if(standingsTableH2 || (standingsTableHead && standingsTableBody)){
         standingsTableTL.from(
@@ -307,7 +302,6 @@ const animations = () => {
             }
         )
     }
-
     // Latest Addition
     const latestAddition = document.querySelectorAll('.latest-addition');
     if(latestAddition){
@@ -344,12 +338,11 @@ const animations = () => {
                     y: 65,
                     opacity: 0,
                     ease: "expo.out",
-                    stagger: 0.3
+                    stagger: 0.13
                 }
             )
         });
     }
-    
     // Newsletter
     if(newsletterTitle && newsletterSubTitle && newsletterFormGrp){
         newsletterTL.from(
@@ -394,7 +387,6 @@ const animations = () => {
             animation: newsletterTL
         });
     }
-
     // Footer
     if(footerSponserLi && footerSponserDiv){
         footerTL.from(
@@ -429,22 +421,10 @@ const animations = () => {
         });
     }
 
-    if(preloaderClass && preloaderLogo){
-        masterTL
-        .add(preloaderTL)
-        .add(headerTL.play())
-        // .add(fixturesTL)
-        .add(standingsTableTL);
-    }else{
-        headerTL.play();
-    }
-    
     // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
     // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
     ScrollTrigger.refresh();
-
 };
   
 export default animations;
