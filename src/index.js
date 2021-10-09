@@ -1,5 +1,4 @@
 import * as bootstrap from "bootstrap";
-import '@fortawesome/fontawesome-free/css/all.css';
 
 import helloWorld from "./scripts/helloWorld";
 import loadDataTables from "./scripts/loadDataTables";
