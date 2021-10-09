@@ -102,10 +102,8 @@ html.has-scroll-dragging {
   right: auto;
   bottom: 0; 
 }
-@media screen and (min-width: $sm) {
-  .dsc {
-    overflow: hidden;
-  }
+.dsc {
+  overflow: hidden;
 }
 .preloader {
   position: absolute;
