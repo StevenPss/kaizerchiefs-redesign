@@ -13,11 +13,9 @@ const animations = () => {
         tablet: { smooth: false },
         // getDirection: true
     });
-
     gsap.config({
         nullTargetWarn: false // don't display warnings
     });
-
     // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
     locoScroll.on("scroll", ScrollTrigger.update);
 
@@ -43,12 +41,6 @@ const animations = () => {
     const lastChild = 2;
     const boxFC = document.querySelector(`.preloader .box:nth-child(${firstChild})`);
     const boxLC = document.querySelector(`.preloader .box:nth-child(${lastChild})`);
-
-    //[TODO run the preloader using gsap instead of css]
-
-    // Cursor
-    // const ballCursor = document.querySelector('.ball-cursor');
-
     // navbar
     const navbar = document.querySelector('.js-main-nav');
     // alert
@@ -58,10 +50,6 @@ const animations = () => {
     const carouselbtn = document.querySelectorAll('.featured-article .featured-article__btn');
     const carouselControls = document.querySelectorAll('.carousel-controls');
     const carouselItem = document.querySelectorAll('.carousel-item');
-     // Standings Area
-    const standingsTableH2 = document.querySelectorAll('.standings-wrapper h2');
-    const standingsTableHead = document.querySelectorAll('#teamStandingsTable thead tr');
-    const standingsTableBody = document.querySelectorAll('#teamStandingsTable tbody tr');
     // Newsletter Area
     const newsletterTitle = document.querySelectorAll('.newsletter__header .newsletter__title');
     const newsletterSubTitle = document.querySelectorAll('.newsletter__header .newsletter__subtitle');
@@ -125,7 +113,7 @@ const animations = () => {
                     ease: "power2.easeInOut",
                     delay: -1.4,
                     onComplete() {
-                        localStorage.setItem("loadingAnimPlayed", true)
+                        // localStorage.setItem("loadingAnimPlayed", true)
                     }
                 }
             )
@@ -280,38 +268,6 @@ const animations = () => {
                 }
             )
         });
-    }
-    // Standings
-    if(standingsTableH2 || (standingsTableHead && standingsTableBody)){
-        standingsTableTL.from(
-            standingsTableH2,
-            {
-                duration: 0.6,
-                y: 40,
-                opacity: 0,
-                ease: "power3.out"
-            }
-        ).from(
-            standingsTableHead,
-            {
-                duration: 0.6,
-                delay: -0.5,
-                y: 40,
-                opacity: 0,
-                ease: "power3.out",
-                stagger: 0.2
-            }
-        ).from(
-            standingsTableBody,
-            {
-                duration: 0.8,
-                delay: -0.1,
-                y: 40,
-                opacity: 0,
-                ease: "power3.out",
-                stagger: 0.3
-            }
-        )
     }
     // Latest Addition
     const latestAddition = document.querySelectorAll('.latest-addition');
