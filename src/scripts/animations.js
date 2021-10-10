@@ -34,6 +34,7 @@ const animations = () => {
     });
 
     // Preloader
+    const dsc = document.querySelector('.dsc');
     const preloader = document.querySelector('.preloader');
     const preloaderPercent = document.querySelector('.preloader #percent');
     const preloaderBar = document.querySelector('.preloader #bar');
@@ -82,6 +83,11 @@ const animations = () => {
     if(!animPlayed){
         if(preloader && preloaderPercent && preloaderBar){
             preloaderTL.to(
+                dsc,//Remove initial flash
+                {
+                    visibility: "visible"
+                }
+            ).to(
                 [preloaderPercent,preloaderBar],
                 {
                     duration: 0.2,
@@ -147,6 +153,11 @@ const animations = () => {
         }
     }else{
         preloaderTL.to(
+            dsc,
+            {
+                visibility: "visible"
+            }
+        ).to(
             preloader,
             {   
                 duration: 0,
@@ -193,9 +204,9 @@ const animations = () => {
         ).from(
             alertNotification,
             {
-                duration: 0.8,
+                duration: 0.3,
                 delay: -0.8,
-                x: 60,
+                y: 60,
                 opacity: 0,
                 ease: "power3.out",
                 stagger: 0.2
