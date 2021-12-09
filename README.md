@@ -169,7 +169,7 @@ Project Link: [https://github.com/StevenPss/kaizerchiefs-redesign](https://githu
 [issues-shield]: https://img.shields.io/github/issues/StevenPss/kaizerchiefs-redesign.svg?style=for-the-badge
 [issues-url]: https://github.com/StevenPss/404-not-found-devChallenges/issues
 [license-shield]: https://img.shields.io/github/license/StevenPss/kaizerchiefs-redesign.svg?style=for-the-badge
-[license-url]: https://github.com/StevenPss/kaizerchiefs-redesign/blob/main/LICENSE.txt
+[license-url]: https://github.com/StevenPss/kaizerchiefs-redesign/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [twitter-shield]: https://img.shields.io/badge/-Twitter-black.svg?style=for-the-badge&logo=twitter&colorB=555
 [github-shield]: https://img.shields.io/badge/-GitHub-black.svg?style=for-the-badge&logo=github&colorB=555
