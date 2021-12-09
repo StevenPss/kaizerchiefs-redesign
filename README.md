@@ -31,7 +31,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/StevenPss/kaizerchiefs-redesign">
-    <img src="images/devchallenges.png" alt="Logo" width="80" height="80">
+    <img src="src/assets/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Kaizer Chiefs website redesign (My version)</h3>
@@ -178,4 +178,4 @@ Project Link: [https://github.com/StevenPss/kaizerchiefs-redesign](https://githu
 [twitter-url]: https://twitter.com/StevenSelolo
 [github-url]: https://github.com/StevenPss
 [youtube-url]: https://www.youtube.com/channel/UCdBRy_dEjhzWgLfvj9GtYNw
-[product-screenshot]: /images/screenshot.png
+[product-screenshot]: /src/assets/kcr-demo.gif
