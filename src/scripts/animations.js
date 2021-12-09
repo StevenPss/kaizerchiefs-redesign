@@ -51,19 +51,19 @@ const animations = () => {
     const carouselControls = document.querySelectorAll('.carousel-controls');
     const carouselItem = document.querySelectorAll('.carousel-item');
     // Newsletter Area
-    const newsletterTitle = document.querySelectorAll('.newsletter__header .newsletter__title');
-    const newsletterSubTitle = document.querySelectorAll('.newsletter__header .newsletter__subtitle');
-    const newsletterFormGrp = document.querySelectorAll('#newsletter__form');
+    // const newsletterTitle = document.querySelectorAll('.newsletter__header .newsletter__title');
+    // const newsletterSubTitle = document.querySelectorAll('.newsletter__header .newsletter__subtitle');
+    // const newsletterFormGrp = document.querySelectorAll('#newsletter__form');
     // Footer Area
-    const footerSponserLi = document.querySelectorAll('.footer__sponsors-list');
-    const footerSponserDiv = document.querySelectorAll('.footer__sitemap');
+    // const footerSponserLi = document.querySelectorAll('.footer__sponsors-list');
+    // const footerSponserDiv = document.querySelectorAll('.footer__sitemap');
     // Timelines
     const preloaderTL = gsap.timeline({paused:true});
     const headerTL = gsap.timeline({paused:true});
     // const fixturesTL = gsap.timeline();
     const standingsTableTL = gsap.timeline();
     const newsletterTL = gsap.timeline();
-    const footerTL = gsap.timeline();
+    // const footerTL = gsap.timeline();
     const masterTL = gsap.timeline();
 
     // Preloader
@@ -270,123 +270,123 @@ const animations = () => {
         });
     }
     // Latest Addition
-    const latestAddition = document.querySelectorAll('.latest-addition');
-    if(latestAddition){
-        gsap.utils.toArray(latestAddition).forEach((latestAddition) => {
-            // Latest Addition Area
-            const latestAdditionH2 = latestAddition.querySelectorAll('h2');
-            const latestAdditionCard = latestAddition.querySelectorAll('.latest-addition__card');
+    // const latestAddition = document.querySelectorAll('.latest-addition');
+    // if(latestAddition){
+    //     gsap.utils.toArray(latestAddition).forEach((latestAddition) => {
+    //         // Latest Addition Area
+    //         const latestAdditionH2 = latestAddition.querySelectorAll('h2');
+    //         const latestAdditionCard = latestAddition.querySelectorAll('.latest-addition__card');
     
-            var latestAdditionTL = gsap.timeline({
-                scrollTrigger:{
-                    autoAlpha: 0,
-                    trigger: latestAddition,
-                    scroller: "[data-scroll-container]",
-                    start: "0% 50%",
-                    end: "+=600",
-                    // markers: true,
-                    animation: latestAdditionTL
-                }
-            });
+    //         var latestAdditionTL = gsap.timeline({
+    //             scrollTrigger:{
+    //                 autoAlpha: 0,
+    //                 trigger: latestAddition,
+    //                 scroller: "[data-scroll-container]",
+    //                 start: "0% 50%",
+    //                 end: "+=600",
+    //                 // markers: true,
+    //                 animation: latestAdditionTL
+    //             }
+    //         });
     
-            latestAdditionTL.from(
-                latestAdditionH2,
-                {
-                    duration: 0.6,
-                    y: 40,
-                    opacity: 0,
-                    ease: "power3.out"
-                }
-            ).from(
-                latestAdditionCard,
-                {
-                    duration: 1.3,
-                    delay: -0.3,
-                    y: 65,
-                    opacity: 0,
-                    ease: "expo.out",
-                    stagger: 0.13
-                }
-            )
-        });
-    }
+    //         latestAdditionTL.from(
+    //             latestAdditionH2,
+    //             {
+    //                 duration: 0.6,
+    //                 y: 40,
+    //                 opacity: 0,
+    //                 ease: "power3.out"
+    //             }
+    //         ).from(
+    //             latestAdditionCard,
+    //             {
+    //                 duration: 1.3,
+    //                 delay: -0.3,
+    //                 y: 75,
+    //                 opacity: 0,
+    //                 ease: "power1.easeOut",
+    //                 stagger: 0.2
+    //             }
+    //         )
+    //     });
+    // }
     // Newsletter
-    if(newsletterTitle && newsletterSubTitle && newsletterFormGrp){
-        newsletterTL.from(
-            newsletterTitle,
-            {
-                duration: 0.6,
-                y: 40,
-                opacity: 0,
-                ease: "power3.out",
-                stagger: 0.2
-            }
-        ).from(
-            newsletterSubTitle,
-            {
-                duration: 0.6,
-                delay: -0.5,
-                y: 40,
-                opacity: 0,
-                ease: "power3.out",
-                stagger: 0.2
-            }
-        ).from(
-            newsletterFormGrp,
-            {
-                duration: 0.6,
-                delay: -0.5,
-                y: 60,
-                opacity: 0,
-                ease: "power3.out",
-                stagger: 0.2
-            }
-        )
+    // if(newsletterTitle && newsletterSubTitle && newsletterFormGrp){
+    //     newsletterTL.from(
+    //         newsletterTitle,
+    //         {
+    //             duration: 0.6,
+    //             y: 40,
+    //             opacity: 0,
+    //             ease: "power3.out",
+    //             stagger: 0.2
+    //         }
+    //     ).from(
+    //         newsletterSubTitle,
+    //         {
+    //             duration: 0.6,
+    //             delay: -0.5,
+    //             y: 40,
+    //             opacity: 0,
+    //             ease: "power3.out",
+    //             stagger: 0.2
+    //         }
+    //     ).from(
+    //         newsletterFormGrp,
+    //         {
+    //             duration: 0.6,
+    //             delay: -0.5,
+    //             y: 60,
+    //             opacity: 0,
+    //             ease: "power3.out",
+    //             stagger: 0.2
+    //         }
+    //     )
 
-        // newsletter scroll trigger
-        ScrollTrigger.create({
-            autoAlpha: 0,
-            trigger: ".newsletter",
-            scroller: "[data-scroll-container]",
-            start: "0% 40%",
-            end: "+=300",
-            // markers: true,
-            animation: newsletterTL
-        });
-    }
+    //     // newsletter scroll trigger
+    //     ScrollTrigger.create({
+    //         autoAlpha: 0,
+    //         trigger: ".newsletter",
+    //         scroller: "[data-scroll-container]",
+    //         start: "0% 40%",
+    //         end: "+=300",
+    //         // markers: true,
+    //         animation: newsletterTL
+    //     });
+    // }
     // Footer
-    if(footerSponserLi && footerSponserDiv){
-        footerTL.from(
-            footerSponserLi,
-            {
-                duration: 0.8,
-                x: -80,
-                opacity: 0,
-                ease: "power3.out"
-            }
-        ).from(
-            footerSponserDiv,
-            {
-                duration: 0.6,
-                delay: -0.6,
-                x: 40,
-                opacity: 0,
-                ease: "power3.out",
-                stagger: 0.2
-            }
-        )
+    // if(footerSponserLi && footerSponserDiv){
+    //     footerTL.from(
+    //         footerSponserLi,
+    //         {
+    //             duration: 0.8,
+    //             x: -80,
+    //             opacity: 0,
+    //             ease: "power3.out"
+    //         }
+    //     ).from(
+    //         footerSponserDiv,
+    //         {
+    //             duration: 0.6,
+    //             delay: -0.6,
+    //             x: 40,
+    //             opacity: 0,
+    //             ease: "power3.out",
+    //             stagger: 0.2
+    //         }
+    //     )
 
-        // footer scroll trigger
-        ScrollTrigger.create({
-            autoAlpha: 0,
-            trigger: "#footer",
-            scroller: "[data-scroll-container]",
-            start: "0% 45%",
-            end: "+=300",
-            // markers: true,
-            animation: footerTL
-        });
-    }
+    //     // footer scroll trigger
+    //     ScrollTrigger.create({
+    //         autoAlpha: 0,
+    //         trigger: "#footer",
+    //         scroller: "[data-scroll-container]",
+    //         start: "0% 45%",
+    //         end: "+=300",
+    //         // markers: true,
+    //         animation: footerTL
+    //     });
+    // }
 
     // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
