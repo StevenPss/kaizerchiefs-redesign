@@ -153,8 +153,8 @@ Project Link: [https://github.com/StevenPss/kaizerchiefs-redesign](https://githu
 * [Icons8](https://icons8.com/)
 * [GSAP](https://greensock.com/gsap/)
 * [Locomotive Scroll](https://locomotivemtl.github.io/locomotive-scroll/)
-
-
+* [Diogo Palhais - Football field with player positions | pure css responsive](https://codepen.io/diogopalhais/pen/Zrojxd)
+* [Kaizer Chiefs - Official site](https://www.kaizerchiefs.com/)
 
 
 
